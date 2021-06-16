@@ -58,11 +58,11 @@ const Home = () => {
           <FileAddOutlined/> Add a Quote
         </a>
       </Menu.Item>
-      <Menu.Item>
+      {/* <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="/entry">
            <UserAddOutlined/> Add a Sheikh  
         </a>
-      </Menu.Item>
+      </Menu.Item> */}
     </Menu>
   );
   return (
