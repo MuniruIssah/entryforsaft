@@ -146,7 +146,7 @@ const Home = () => {
       </Drawer>
       <div
         style={{
-          width: 'min(950px,85vw)',
+          width: 'min(950px,90vw)',
           minHeight: '55vh',
           display: 'flex',
           flexDirection: 'column',
