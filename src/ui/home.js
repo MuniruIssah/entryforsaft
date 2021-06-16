@@ -54,7 +54,7 @@ const Home = () => {
   const menu = (
     <Menu>
       <Menu.Item>
-        <a target="_blank" rel="noopener noreferrer" onClick={()=>{setShowQuoteDrawer(true);}}>
+        <a target="" rel="noopener noreferrer" href='' onClick={()=>{setShowQuoteDrawer(true);}}>
           <FileAddOutlined/> Add a Quote
         </a>
       </Menu.Item>
