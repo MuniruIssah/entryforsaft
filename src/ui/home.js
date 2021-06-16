@@ -236,7 +236,7 @@ const Home = () => {
                   }}>
                   <div style={{display: 'flex', flexDirection: 'column',alignItems:'flex-start'}}>
                     <span style={{fontWeight: '400'}}>{item.author}</span>
-                    <span style={{fontWeight: '300', color: 'grey'}}>
+                    <span style={{fontWeight: '300', color: 'grey',textAlign:'left'}}>
                       {item.quote}
                     </span>
                   </div>
