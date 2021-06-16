@@ -101,7 +101,7 @@ const Home = () => {
             <Form.Item label="Sheikh's Name">
               <Input
               size='large'
-                style={{width:'min(500px,95vw)'}}
+                style={{width:'min(300px,95vw)'}}
                 value={quoteState.author}
                 onChange={e => {
                   setQuoteState({
@@ -126,7 +126,7 @@ const Home = () => {
             <Form.Item label="Reference (if any)">
               <Input
               size='large'
-                style={{width:'min(500px,95vw)'}}
+                style={{width:'min(300px,95vw)'}}
                 value={quoteState.reference}
                 onChange={e => {
                   setQuoteState({
