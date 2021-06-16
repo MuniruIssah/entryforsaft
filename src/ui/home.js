@@ -1,10 +1,7 @@
 import {
   Avatar,
   List,
-  Space,
   Button,
-  message,
-  Skeleton,
   Menu,
   Dropdown,
   Drawer,
@@ -12,7 +9,6 @@ import {
   Input,
 } from 'antd';
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
 import {PlusOutlined, CloseOutlined,UserAddOutlined,FileAddOutlined} from '@ant-design/icons';
 import {createWithNoFile, getCollection} from '../backend/functions';
 import '../App.css';
@@ -53,10 +49,10 @@ const Home = () => {
 
   const menu = (
     <Menu>
-      <Menu.Item>
-        <a target="" rel="noopener noreferrer" href='' onClick={()=>{setShowQuoteDrawer(true);}}>
+      <Menu.Item onClick={()=>{setShowQuoteDrawer(true);}}>
+         
           <FileAddOutlined/> Add a Quote
-        </a>
+    
       </Menu.Item>
       {/* <Menu.Item>
         <a target="_blank" rel="noopener noreferrer" href="/entry">
