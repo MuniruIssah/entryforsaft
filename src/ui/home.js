@@ -167,7 +167,7 @@ const Home = () => {
           style={{backgroundColor: 'white', cursor: 'pointer'}}
         />
         </Dropdown>
-        <div style={{height: '60vh', width: '100%', alignItems: 'flex-start'}}>
+        <div style={{height: '50vh', width: '100%', alignItems: 'flex-start'}}>
           <div style={{display: 'flex', justifyContent: 'flex-start'}}>
             <Button
               type={isSheikh ? 'primary' : 'default'}
