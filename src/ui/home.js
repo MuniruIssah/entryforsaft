@@ -167,7 +167,7 @@ const Home = () => {
           style={{backgroundColor: 'white', cursor: 'pointer'}}
         />
         </Dropdown>
-        <div style={{height: '50vh', width: '100%', alignItems: 'flex-start'}}>
+        <div style={{height: '60vh', width: '100%', alignItems: 'flex-start'}}>
           <div style={{display: 'flex', justifyContent: 'flex-start'}}>
             <Button
               type={isSheikh ? 'primary' : 'default'}
@@ -188,7 +188,7 @@ const Home = () => {
           </div>
           {isSheikh ? (
             <List
-              style={{backgroundColor: 'white'}}
+             
               className="demo-loadmore-list"
               dataSource={allSheikhs}
               renderItem={item => (
@@ -196,6 +196,7 @@ const Home = () => {
                   style={{
                     display: 'flex',
                     flexDirection: 'row',
+                    backgroundColor:'white',
                     minHeight: 50,
                     borderBottom: '1px solid whitesmoke',
                     padding: 15,
@@ -217,7 +218,7 @@ const Home = () => {
             />
           ) : (
             <List
-              style={{backgroundColor: 'white', width: '100%'}}
+              style={{height:'45vh',overflow:'scroll', width: '100%'}}
               className="demo-loadmore-list"
               itemLayout="horizontal"
               loadMore={true}
@@ -231,6 +232,7 @@ const Home = () => {
                     minHeight: 50,
                     borderBottom: '1px solid whitesmoke',
                     padding: 15,
+                    backgroundColor:'white',
                     alignItems: 'flex-start',
                     justifyContent: 'space-between',
                   }}>
