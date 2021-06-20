@@ -67,8 +67,7 @@ const Home = () => {
       style={{
         position: 'relative',
         width: '100vw',
-        minHeight: '100vh',
-        height: 'auto',
+        height: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
