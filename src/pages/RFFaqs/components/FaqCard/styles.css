@@ -1,0 +1,81 @@
+.accordionCard {
+  outline: none;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 250ms ease-in-out;
+}
+
+.accordionCard .accordionAnswer {
+  padding: 5%;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.accordionCard summary {
+  outline: none;
+  display: flex;
+  text-align: left;
+  position: relative;
+  border-radius: 10px;
+  color: white;
+  padding: 1.5em;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: all 250ms ease-in-out;
+}
+.accordionCard summary .accordionIcon {
+  position: absolute;
+  right: 5%;
+  width: 10px;
+  bottom: 45%;
+  border-radius: 2px;
+  height: 10px;
+  transform: rotateZ(45deg);
+  transition: all 250ms ease-in-out;
+  border: 2px solid transparent;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  border: bottom;
+}
+.accordionCard[open] summary {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.accordionCard[open] summary .accordionIcon {
+  transform: rotateZ(225deg);
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.high[open] {
+  background-color: hsl(120, 50%, 80%);
+}
+.medium[open] {
+  background-color: hsl(29, 100%, 80%);
+}
+.low[open] {
+  background-color: hsl(9, 100%, 90%);
+}
+.high summary {
+  background-color: hsl(120, 50%, 45%);
+}
+.high .accordionAnswer {
+  color: hsl(120, 50%, 45%);
+}
+.medium summary {
+  background-color: hsl(29, 100%, 56%);
+}
+.medium .accordionAnswer {
+  color: hsl(29, 100%, 46%);
+}
+
+.low summary {
+  background-color: hsl(9, 100%, 64%);
+}
+.low .accordionAnswer {
+  color: hsl(9, 100%, 54%);
+}

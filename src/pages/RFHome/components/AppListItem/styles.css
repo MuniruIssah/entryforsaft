@@ -1,0 +1,52 @@
+.rfAppListItem {
+  position: relative;
+  display: flex;
+  padding: 10px 10px;
+  background-color: white;
+  justify-content: flex-start;
+  border-radius: 6px;
+  overflow: hidden;
+  align-items: center;
+  box-sizing: border-box;
+  margin:0px 10px 1.5rem 0px;
+}
+.rfAppListItem .listLogo {
+  width: 30px;
+  height: 30px;
+  background-position: center;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.rfAppListItem .visitIcon {
+    position: absolute;
+    right: 15px;
+    color: white;
+    font-size: 0px;
+    transition: all 250ms ease-in-out;
+  }
+.rfAppListItem ::before {
+  content: '';
+  width: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 15px;
+  background-color: hsl(6, 93%, 71%);
+  transition: all 250ms ease-in-out;
+}
+.rfAppListItem:hover{
+    box-shadow: 1px 0.5px 5px 1px hsl(0, 0%, 65%);
+}
+.rfAppListItem:hover .visitIcon{
+    font-size: 17px;
+}
+
+.rfAppListItem:hover ::before {
+  content: '';
+  width: 30%;
+  height: 100%;
+
+}
+
+

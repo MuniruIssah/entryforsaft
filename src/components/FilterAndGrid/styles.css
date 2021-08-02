@@ -1,0 +1,16 @@
+.rfFilterAndGrid {
+  height: 93vh;
+}
+.rfFilterAndGrid .filterSection {
+  border-right: 1px solid hsl(0, 0%, 90%);
+  position: relative;
+}
+
+.rfFilterAndGrid .filterSection .filterSectionInner {
+  position: sticky;
+  top: 7vh;
+}
+
+.rfFilterAndGrid .gridSection {
+  padding-bottom: 3rem;
+}

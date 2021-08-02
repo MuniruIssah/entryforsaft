@@ -1,0 +1,27 @@
+.rfHome {
+background: linear-gradient(to right, #d3d4e0, #abbaab);
+  height: 100vh;
+  color: hsl(0, 0%, 40%);
+  text-align: left;
+}
+
+.rfHomeContentWrapper {
+  padding: 3%;
+}
+
+.rfHomeContentWrapper .allAppSpan {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 2rem;
+}
+.appGridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  place-items: flex-start;
+}
+
+.appListWrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}

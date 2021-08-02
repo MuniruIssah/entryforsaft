@@ -5,6 +5,9 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import Home from './ui/home';
 import Entry from './ui/entry';
 import Mainuuu from './ui/mainuu';
+import RFHome from './pages/RFHome';
+import RFFaqs from './pages/RFFaqs';
+import RFAskUs from './pages/RFAskUs';
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,15 @@ function App() {
           </Route>
           <Route path="/main" >
             <Mainuuu/>
+          </Route>
+          <Route path="/rf" >
+            <RFHome/>
+          </Route>
+          <Route path="/faqs" >
+            <RFFaqs/>
+          </Route>
+          <Route path="/askUs" >
+            <RFAskUs/>
           </Route>
         </Switch>
       </Router>

@@ -1,0 +1,37 @@
+.rfAppCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.appLogo{
+    padding: 2px;
+    border: 2px solid gainsboro;
+    border-radius: 10px;
+    margin-bottom: 0.3rem;
+}
+
+.appLogo .logo{
+   background-position: center center;
+   width: 50px;
+   cursor: pointer;
+   height: 45px;
+   border-radius: 8px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   transition: all 250ms ease-in-out;
+}
+
+.appLogo:hover .logo{
+  height: 50px;
+}
+
+.rfAppCard span{
+    color: hsl(0, 0%, 60%);
+    display: block;
+    padding-left: 2px;
+    margin-bottom:0.5rem ;
+}
