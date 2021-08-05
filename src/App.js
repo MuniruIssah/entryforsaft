@@ -8,6 +8,8 @@ import Mainuuu from './ui/mainuu';
 import RFHome from './pages/RFHome';
 import RFFaqs from './pages/RFFaqs';
 import RFAskUs from './pages/RFAskUs';
+import RFShuyuukh from './pages/RFShuyuukh';
+import RFNews from './pages/RFNews';
 function App() {
   return (
     <div className="App">
@@ -30,6 +32,12 @@ function App() {
           </Route>
           <Route path="/askUs" >
             <RFAskUs/>
+          </Route>
+          <Route path="/shuyuukh" >
+            <RFShuyuukh/>
+          </Route>
+          <Route path="/news" >
+            <RFNews/>
           </Route>
         </Switch>
       </Router>

@@ -3,7 +3,7 @@ import "./styles.css";
 
 const RFFaqCard = ({question, answer, urgency}) => {
   return (
-    <details className={`accordionCard ${urgency}`}>
+    <details className={`accordionCard `}>
       <summary>
         <span>{question}</span>
         <div className="accordionIcon" ></div>

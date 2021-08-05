@@ -1,13 +1,19 @@
 export const Filters = [
   {
-    label: 'All Questions',
+    label: 'All Sheikhs',
     active: true,
   },
   {
-    label: 'Most Upvoted',
+    label: 'Morocco',
   },
   {
-    label: '#White Cloth',
+    label: 'Senegal',
+  },
+  {
+    label: 'Ghana',
+  },
+  {
+    label: 'Nigeria',
   },
 ];
 
@@ -186,5 +192,41 @@ export const QandAs = [
     question: 'Who is the founder of tariqa',
     answer: 'Sheikh Tijaani',
     // withVotes: true,
+  },
+];
+
+export const Shuyuukh = [
+  {
+    name: 'Sheikh Ahmed Tijaani',
+  },
+  {
+    name: 'Sheikh Ibrahim Inyass',
+  },
+  {
+    name: 'Sheikh Aliu Cisse',
+  },
+  {
+    name: 'Sheikh Hassan Cisse',
+  },
+  {
+    name: 'Sheikhu Tijaani',
+  },
+  {
+    name: 'Sheikhu Tijaani',
+  },
+  {
+    name: 'Sheikhu Tijaani',
+  },
+  {
+    name: 'Sheikhu Tijaani',
+  },
+  {
+    name: 'Sheikhu Tijaani',
+  },
+  {
+    name: 'Sheikhu Tijaani',
+  },
+  {
+    name: 'Sheikhu Tijaani',
   },
 ];

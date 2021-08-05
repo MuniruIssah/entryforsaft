@@ -8,7 +8,7 @@
   overflow: hidden;
   align-items: center;
   box-sizing: border-box;
-  margin:0px 10px 1.5rem 0px;
+  margin: 0px 10px 1.5rem 0px;
 }
 .rfAppListItem .listLogo {
   width: 30px;
@@ -19,12 +19,29 @@
 }
 
 .rfAppListItem .visitIcon {
-    position: absolute;
-    right: 15px;
-    color: white;
-    font-size: 0px;
-    transition: all 250ms ease-in-out;
-  }
+  position: absolute;
+  right: 15px;
+  color: white;
+  font-size: 0px;
+  transition: all 250ms ease-in-out;
+}
+
+.rfAppListItem .labelAndDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.rfAppListItem .labelAndDescription .desc {
+  color: hsl(0, 0%, 70%);
+  font-size: 13px;
+  transition: all 250ms ease-in-out;
+}
+.rfAppListItem .labelAndDescription .desc ::before{
+  color: hsl(0, 0%, 70%);
+  font-size: 13px;
+  transition: all 250ms ease-in-out;
+}
+
 .rfAppListItem ::before {
   content: '';
   width: 15px;
@@ -35,18 +52,18 @@
   background-color: hsl(6, 93%, 71%);
   transition: all 250ms ease-in-out;
 }
-.rfAppListItem:hover{
-    box-shadow: 1px 0.5px 5px 1px hsl(0, 0%, 65%);
+.rfAppListItem:hover {
+  box-shadow: 1px 0.5px 5px 1px hsl(0, 0%, 65%);
 }
-.rfAppListItem:hover .visitIcon{
-    font-size: 17px;
+.rfAppListItem:hover .visitIcon {
+  font-size: 17px;
 }
 
 .rfAppListItem:hover ::before {
   content: '';
-  width: 30%;
+  width: 20%;
   height: 100%;
-
 }
-
-
+.rfAppListItem:hover .labelAndDescription .desc  {
+  display: block;
+}

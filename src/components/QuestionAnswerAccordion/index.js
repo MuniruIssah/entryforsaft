@@ -1,16 +1,16 @@
 import React from 'react';
-import {ArrowUpOutlined} from '@ant-design/icons';
+import {ArrowUpOutlined, ArrowDownOutlined} from '@ant-design/icons';
 import './styles.css';
-const RFQuestionAnswerCard = ({question, answer, withVotes}) => {
+const RFQuestionAnswerAccordion = ({question, answer, withVotes}) => {
   return (
     <div>
-      <div className="qAndACard">
-        <div className="qSection">
-          <span>Q:</span>
+      <details className={`qAndAAccordion`}>
+        <summary>
           <span>{question}</span>
-        </div>
+          <div className="qAndAIcon"></div>
+        </summary>
         <div className="qAndAAnswer">{answer}</div>
-      </div>
+      </details>
       {withVotes && (
         <div className="voteStrip">
           <button className="vsIcon">
@@ -23,4 +23,4 @@ const RFQuestionAnswerCard = ({question, answer, withVotes}) => {
   );
 };
 
-export default RFQuestionAnswerCard;
+export default RFQuestionAnswerAccordion;

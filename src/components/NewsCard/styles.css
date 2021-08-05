@@ -1,0 +1,54 @@
+.rfNewsCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rfNewsCardDate {
+  background-color: rgb(63, 167, 132);
+  border-top-left-radius: 6px;
+  font-size: 12px;
+  border-top-right-radius: 6px;
+  width: 101px;
+  color: rgb(255, 255, 255);
+  padding: 5px 0px;
+  font-weight: 600;
+  margin-bottom: -6px;
+  margin-left: 5px;
+  z-index: 3;
+}
+
+.rfNewsCardInner {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  border-top: no;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  overflow: hidden;
+  height: 70px;
+  align-items: center;
+  margin: 5px 5px 2rem;
+  transition: all 250ms ease-in-out;
+
+}
+.rfNewsCardInner .newsImage {
+  width: 100px;
+  height: 100%;
+  margin-right: 15px;
+  border-right: 1px solid hsl(0, 0%, 89%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.rfNewsCardInner .sheikhDetails {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.rfSheikhNewsCard:hover {
+}

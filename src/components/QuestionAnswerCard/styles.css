@@ -1,113 +1,42 @@
 .qAndACard {
-  outline: none;
-  margin: 8px;
   border-radius: 10px;
-  text-align: left;
-  transition: all 250ms ease-in-out;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin: 15px;
+  padding: 15px;
+  position: relative;
+}
+
+.qAndACard .qSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.qAndACard .qSection span:first-child {
+  font-size: 13px;
+  color: hsl(0, 0%, 50%);
+}
+.qAndACard .qSection span:last-child {
+  font-size: 14px;
+  color: hsl(0, 0%, 20%);
+  font-weight: 500;
 }
 
 .qAndACard .qAndAAnswer {
-  padding: 5%;
-  font-size: 15px;
-  font-weight: 600;
-}
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: hsl(120, 29%, 83%);
+  /* background-color: dodgerblue; */
 
-.qAndACard summary {
-  outline: none;
-  display: flex;
-  text-align: left;
-  position: relative;
-  border-radius: 10px;
-  color: white;
-  padding: 1.5em;
-  font-size: 13px;
+  padding: 0px 10px;
+  font-size: 14px;
+  color: hsl(120, 29%, 30%);
   font-weight: 500;
-  text-transform: capitalize;
-  transition: all 250ms ease-in-out;
-}
-.qAndACard summary .qAndAIcon {
-  position: absolute;
-  right: 5%;
-  width: 10px;
-  bottom: 45%;
-  border-radius: 2px;
-  height: 10px;
-  transform: rotateZ(45deg);
-  transition: all 250ms ease-in-out;
-  border: 2px solid transparent;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
-  border: bottom;
-}
-.qAndACard[open] summary {
-  border-radius: 10px 10px 0px 0px;
-}
-
-.qAndACard[open] summary .qAndAIcon {
-  transform: rotateZ(225deg);
-}
-
-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-.high[open] {
-  background-color: hsl(120, 50%, 80%);
-}
-.medium[open] {
-  background-color: hsl(29, 100%, 80%);
-}
-.low[open] {
-  background-color: hsl(9, 100%, 90%);
-}
-.high summary {
-  background-color: hsl(120, 50%, 45%);
-}
-.high .qAndAAnswer {
-  color: hsl(120, 50%, 45%);
-}
-.medium summary {
-  background-color: hsl(29, 100%, 56%);
-}
-.medium .qAndAAnswer {
-  color: hsl(29, 100%, 46%);
-}
-
-.low summary {
-  background-color: hsl(9, 100%, 64%);
-}
-.low .qAndAAnswer {
-  color: hsl(9, 100%, 54%);
-}
-
-.none[open] {
-  background-color: hsl(0, 0%, 35%);
-}
-.none summary {
-  background-color: hsl(0, 0%, 10%);
-}
-.none .qAndAAnswer {
-  color: white;
-}
-
-.voteStrip {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 2.5%;
-  margin-bottom: 15px;
-}
-.vsIcon {
-  color: grey;
-  background: none;
-  margin-left: 10px;
-  border: 1px solid gainsboro;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90px;
   border-radius: 6px;
-}
-.vsIcon span{
-  margin-left: 5px;
-}
-.vsIcon:hover{
- background-color: dodgerblue;
- border: 1px solid transparent;
- color: white;
 }

@@ -1,5 +1,5 @@
 .rfHome {
-background: linear-gradient(to right, #d3d4e0, #abbaab);
+  background: linear-gradient(to right, #d3d4e0, #abbaab);
   height: 100vh;
   color: hsl(0, 0%, 40%);
   text-align: left;
@@ -7,6 +7,7 @@ background: linear-gradient(to right, #d3d4e0, #abbaab);
 
 .rfHomeContentWrapper {
   padding: 3%;
+  padding-top: 8vh;
 }
 
 .rfHomeContentWrapper .allAppSpan {

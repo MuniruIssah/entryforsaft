@@ -3,18 +3,18 @@ import RFHeader from '../../components/RFHeader';
 import DescriptionStrip from '../../components/DescriptionStrip';
 import FilterAndGrid from '../../components/FilterAndGrid';
 import './styles.css';
-import {Filters, QandAs} from './utils';
+import {Filters,Shuyuukh} from './utils';
 import RFGridWrapper from '../../components/GridWrapper';
-import RFQuestionAnswerAccordion from '../../components/QuestionAnswerAccordion';
+import RFSheikhListItem from '../../components/SheikhListItem';
 import {UnorderedListOutlined, AppstoreOutlined} from '@ant-design/icons';
-import RFQuestionAnswerCard from '../../components/QuestionAnswerCard';
-const RFAskUs = () => {
+import RFSheikhCard from '../../components/SheikhCard';
+const RFShuyuukh = () => {
   return (
     <div className="rfAskUs">
-      <RFHeader title="RFAskUs" />
+      <RFHeader title="RFShuyuukh" />
       <DescriptionStrip
-        title="Ask Anything Tariqa"
-        description="With Answers from renowned Sheikhs"
+        title="Shuyuukh"
+        description="All The Sheikhs of our beloved path"
       />
       <FilterAndGrid filterList={Filters}>
         <div className="viewControlStrip">
@@ -26,9 +26,10 @@ const RFAskUs = () => {
           </IconBlock>
         </div>
         <RFGridWrapper>
-          {QandAs.map(qanda => (
-            // <RFQuestionAnswerAccordion key={qanda.question} {...qanda} />
-            <RFQuestionAnswerCard key={qanda.question} {...qanda}/>
+          {Shuyuukh.map(sheikh => (
+            <RFSheikhListItem key={sheikh.name} {...sheikh}/>
+            // <RFSheikhCard key={sheikh.name} {...sheikh}/>
+
           ))}
         </RFGridWrapper>
       </FilterAndGrid>
@@ -36,7 +37,7 @@ const RFAskUs = () => {
   );
 };
 
-export default RFAskUs;
+export default RFShuyuukh;
 
 const IconBlock = ({children}) => {
   return <div className="iconBlock">{children}</div>;
