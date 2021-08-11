@@ -1,0 +1,25 @@
+.quoteControls {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.quoteControls button {
+  background-color: white;
+  color: hsl(0, 0%, 70%);
+  border-radius: 3px;
+  border: 1px solid hsl(0, 0%, 70%);
+  transition: all 250ms ease-in-out;
+}
+.quoteControls button:first-child {
+  margin-right: 10px;
+}
+.quoteControls button:hover {
+  background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 90%);
+}
+
+.quoteControls  .active {
+  background-color: hsl(0, 0%, 30%);
+  color: hsl(0, 0%, 90%);
+}

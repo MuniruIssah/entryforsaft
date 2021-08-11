@@ -1,0 +1,28 @@
+.quoteCardBasic {
+  height: 300px;
+  padding: 30px 20px 15px;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  margin: 5px 20px 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.quoteCardBasic .quoteMain{
+    text-align: center;
+}
+.quoteCardBasic .sheikhImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: contain;
+}
+
+
+.quoteCardBasic .author{
+    color: hsl(0, 0%, 60%);
+    font-size: 14px;
+}

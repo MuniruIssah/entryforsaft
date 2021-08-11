@@ -1,0 +1,37 @@
+.quoteCardAlternate {
+  height: 300px;
+  padding: 30px 25px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin: 5px 20px 20px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.quoteCardAlternate::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  top: 0;
+  z-index: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.85);
+}
+.quoteCardAlternate .quoteMain {
+  width: 100%;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.quoteCardAlternate .author {
+  color: hsl(0, 0%, 70%);
+  font-size: 14px;
+  width: 100%;
+  z-index: 2;
+}

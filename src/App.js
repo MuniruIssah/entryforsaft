@@ -10,6 +10,7 @@ import RFFaqs from './pages/RFFaqs';
 import RFAskUs from './pages/RFAskUs';
 import RFShuyuukh from './pages/RFShuyuukh';
 import RFNews from './pages/RFNews';
+import RFQuotes from './pages/RFQuotes';
 function App() {
   return (
     <div className="App">
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/news" >
             <RFNews/>
+          </Route>
+          <Route path="/quotes" >
+            <RFQuotes/>
           </Route>
         </Switch>
       </Router>
