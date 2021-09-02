@@ -25,7 +25,7 @@ function App() {
           <Route path="/main" >
             <Mainuuu/>
           </Route>
-          <Route path="/rf" >
+          <Route path="/to" >
             <RFHome/>
           </Route>
           <Route path="/faqs" >

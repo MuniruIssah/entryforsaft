@@ -7,7 +7,9 @@
   top:8vh;
 }
 
-
+.rfAskUs{
+  height: 100vh;
+}
 .iconBlock {
   padding: 5px 10px;
   border: 0.5px solid hsl(0, 0%, 63%);

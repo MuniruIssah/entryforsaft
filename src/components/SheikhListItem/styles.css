@@ -27,8 +27,7 @@
 }
 .rfSheikhListItem .flag {
   position: absolute;
-  background-color: white;
-  right: 10%;
+  right: 5%;
 
   border-bottom: none;
   padding:5px 14px 2px;
@@ -40,9 +39,9 @@
 .rfSheikhListItem:hover{
   background-color: gainsboro;
 }
-.rfSheikhListItem:hover .flag{
+/* .rfSheikhListItem:hover .flag{
   display: block;
   background-color: gainsboro;
-  /* border: 1px solid hsl(0, 0%, 89%); */
+  
   bottom: 100%;
-}
+} */

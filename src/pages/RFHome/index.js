@@ -35,8 +35,9 @@ const AppList = [
 const RFHome = () => {
   return (
     <div className="rfHome">
-      <RFHeader title="RfHub" />
-      <RfHomeContentWrapper />
+      <RFHeader title="TariqaOnline" />
+      <DescriptionStrip description="Where Everything Tariqa Lives" title="Tariqa Online"/>
+      {/* <RfHomeContentWrapper /> */}
     </div>
   );
 };
@@ -47,11 +48,6 @@ const RfHomeContentWrapper = () => {
   return (
     <div className="rfHomeContentWrapper">
       <span className="allAppSpan">All Apps</span>
-      {/* <div className="appGridWrapper">
-        {AppList.map(item => (
-          <RfAppCard key={item.label} {...item} />
-        ))}
-      </div> */}
       <div className="appListWrapper">
         {AppList.map(item => (
           <RFAppListItem key={item.label} {...item} />

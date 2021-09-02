@@ -9,7 +9,7 @@ import {faqs} from './utils';
 const RFFaqs = () => {
   return (
     <div className="rfFaqs">
-      <RFHeader title="RFFAQ's" />
+      <RFHeader title="FAQ's" />
       <DescriptionStrip
         title="Faq's"
         description="Frequently Asked Questions about Tariqa"

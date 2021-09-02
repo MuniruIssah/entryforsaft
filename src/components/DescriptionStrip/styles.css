@@ -1,6 +1,6 @@
 .rfDescriptionStrip{
-    height: 28vh;
-    margin-top: 7vh;
+    height: 35vh;
+    /* margin-top: 7vh; */
     width: 100%;
     color: hsl(0, 0%, 20%);
     border-bottom: 1px solid hsl(0, 0%, 90%);
