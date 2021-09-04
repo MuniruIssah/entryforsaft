@@ -37,7 +37,7 @@ const RFHome = () => {
     <div className="rfHome">
       <RFHeader title="TariqaOnline" />
       <DescriptionStrip description="Where Everything Tariqa Lives" title="Tariqa Online"/>
-      {/* <RfHomeContentWrapper /> */}
+      <RfHomeContentWrapper />
     </div>
   );
 };
