@@ -7,30 +7,23 @@ import RFHeader from '../../components/RFHeader';
 import RFAppListItem from './components/AppListItem';
 
 const AppList = [
+  // {
+  //   label: 'Ruuhul Faida',
+  //   description:"This is Ruuhul Faida's Website",
+  //   image: sheehu,
+  // },
   {
-    label: 'Ruuhul Faida',
-    description:"This is Ruuhul Faida's Website",
-    image: sheehu,
-  },
-  {
-    label: 'Mawluud',
-    description:"This is Ruuhul Faid's Website",
+    label: 'Shuyuukh',
+    description:"All Sheikhs of Tariqa",
 
     image: sheehu,
   },
   {
     label: "FAQ's",
-    description:"This is Ruuhul Faid's Website",
+    description:"Frequently Asked Questions",
 
     image: sheehu,
   },
-  {
-    label: 'Proof',
-    description:"This is Ruuhul Faid's Website",
-    image: sheehu,
-  },
-
-
 ];
 const RFHome = () => {
   return (

@@ -49,11 +49,11 @@
   bottom: 0;
   right: 0;
   height: 15px;
-  background-color: hsl(6, 93%, 71%);
+  background-color: hsl(239, 93%, 71%);
   transition: all 250ms ease-in-out;
 }
 .rfAppListItem:hover {
-  box-shadow: 1px 0.5px 5px 1px hsl(0, 0%, 65%);
+  box-shadow: 1px 0.5px 5px 1px hsl(0, 0%, 75%);
 }
 .rfAppListItem:hover .visitIcon {
   font-size: 17px;

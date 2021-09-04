@@ -11,12 +11,11 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin: 3rem 0px 1rem ;
+    margin: 2rem 0px 1rem ;
     border: 1px solid hsl(0, 0%, 89%);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
   
   }
   .rfSheikhCard .flag {
