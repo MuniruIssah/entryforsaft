@@ -3,6 +3,7 @@
     flex-direction: column;
     border: 1px solid lightgray;
     align-items: center;
+    cursor: pointer;
     border-radius: 6px;
     margin: 5px;
     padding: 0px 10px;

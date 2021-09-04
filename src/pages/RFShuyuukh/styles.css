@@ -18,3 +18,10 @@
   margin-left: 10px;
   color: hsl(0, 0%, 43%);
 }
+
+.activeIcon{
+  background-color: #373737 !important;
+  color: lightgray !important;
+  border: none;
+
+}

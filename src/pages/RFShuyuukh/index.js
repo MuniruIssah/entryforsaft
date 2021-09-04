@@ -1,15 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RFHeader from "../../components/RFHeader";
 import DescriptionStrip from "../../components/DescriptionStrip";
 import FilterAndGrid from "../../components/FilterAndGrid";
 import "./styles.css";
-import { Filters, Shuyuukh } from "./utils";
+import { Shuyuukh } from "./utils";
 import RFGridWrapper from "../../components/GridWrapper";
 import RFSheikhListItem from "../../components/SheikhListItem";
 import { UnorderedListOutlined, AppstoreOutlined } from "@ant-design/icons";
 import RFSheikhCard from "../../components/SheikhCard";
+import { Empty } from "antd";
 const RFShuyuukh = () => {
+  //states
   const [list, setList] = useState(true);
+  const [sheikhs, setSheikhs] = useState([...Shuyuukh]);
+  const [filterBy, setFilterBy] = useState("all");
+
+  const handleFilterChange = (filter) => {
+    setFilterBy(filter);
+  };
+
+  //side effect to filter the Shuyuukh List by country
+  useEffect(() => {
+    if (filterBy === "all") setSheikhs([...Shuyuukh]);
+    else setSheikhs(Shuyuukh.filter((sheikh) => sheikh.country === filterBy));
+  }, [filterBy]);
+
+  //All Filters
+  const Filters = [
+    {
+      label: "All",
+      active: filterBy === "all" ? true : false,
+      onFilter: handleFilterChange,
+    },
+    {
+      label: "Morocco",
+      active: filterBy === "Morocco" ? true : false,
+      onFilter: handleFilterChange,
+    },
+    {
+      label: "Senegal",
+      active: filterBy === "Senegal" ? true : false,
+      onFilter: handleFilterChange,
+    },
+    {
+      label: "Ghana",
+      active: filterBy === "Ghana" ? true : false,
+      onFilter: handleFilterChange,
+    },
+    {
+      label: "Nigeria",
+      active: filterBy === "Nigeria" ? true : false,
+      onFilter: handleFilterChange,
+    },
+  ];
+
   return (
     <div className="rfAskUs">
       <RFHeader title="Shuyuukh" />
@@ -19,20 +63,26 @@ const RFShuyuukh = () => {
       />
       <FilterAndGrid filterList={Filters}>
         <div className="viewControlStrip">
-          <IconBlock onClick={() => setList(true)}>
+          <IconBlock onClick={() => setList(true)} active={list}>
             <UnorderedListOutlined />
           </IconBlock>
-          <IconBlock onClick={() => setList(false)}>
+          <IconBlock onClick={() => setList(false)} active={!list}>
             <AppstoreOutlined />
           </IconBlock>
         </div>
         <RFGridWrapper>
-          {Shuyuukh.map((sheikh) =>
-            list ? (
-              <RFSheikhListItem key={sheikh.name} {...sheikh} />
-            ) : (
-              <RFSheikhCard key={sheikh.name} {...sheikh} />
-            )
+          {sheikhs.length > 0 ? (
+            <>
+              {sheikhs.map((sheikh) =>
+                list ? (
+                  <RFSheikhListItem key={sheikh.name} {...sheikh} />
+                ) : (
+                  <RFSheikhCard key={sheikh.name} {...sheikh} />
+                )
+              )}
+            </>
+          ) : (
+            <Empty description="There are no sheikhs yet" />
           )}
         </RFGridWrapper>
       </FilterAndGrid>
@@ -42,9 +92,12 @@ const RFShuyuukh = () => {
 
 export default RFShuyuukh;
 
-const IconBlock = ({ children, onClick }) => {
+const IconBlock = ({ children, onClick, active }) => {
   return (
-    <div onClick={onClick} className="iconBlock">
+    <div
+      onClick={onClick}
+      className={`iconBlock ${active ? "activeIcon" : ""}`}
+    >
       {children}
     </div>
   );
