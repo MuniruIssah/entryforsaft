@@ -1,7 +1,7 @@
 .rfFaqsAskUs {
   position: fixed;
   z-index: 10;
-  box-shadow: 3px 3px 5px 2px lightgray;
+  box-shadow: 3px 3px 10px 1px rgb(110, 110, 110,0.5);
   border-radius: 8px;
   bottom: 3%;
   right: 3%;
@@ -29,9 +29,9 @@
   color: white;
   transition: all 250ms ease-in-out;
 }
-.rfFaqsAskUs:hover {
+/* .rfFaqsAskUs:hover {
   box-shadow: 3px 3px 5px 2px lightgray;
-}
+} */
 
 .rfFaqsAskUs:hover .askUsText {
   display: block;
