@@ -13,10 +13,15 @@ const SheikhDrawer = ({ visible, onClose, sheikh }) => {
       className="sheikhDrawer"
       headerStyle={{ textAlign: "left" }}
       onClose={onClose}
-      width="min(400px,100vw)"
+      width="min(420px,100vw)"
       placement="right"
     >
-      <Avatar icon={<UserOutlined />} size={100} />
+      <Avatar
+        src={sheikh.profile}
+        style={{ border: "1px solid gainsboro" }}
+        icon={<UserOutlined />}
+        size={100}
+      />
       <span className="location">
         <FontAwesomeIcon
           icon={faMapMarkerAlt}

@@ -1,5 +1,6 @@
 .rfSheikhListItem {
   display: flex;
+  box-sizing: border-box;
   position: relative;
   border: 1px solid lightgray;
   height: 70px;
@@ -18,31 +19,29 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
-
 }
 .rfSheikhListItem .sheikhDetails {
   display: flex;
   flex-direction: column;
   font-weight: 500;
 }
-.rfSheikhListItem .sheikhDetails span{
-text-transform: capitalize;
-display: block;
-text-align: left;
+.rfSheikhListItem .sheikhDetails span {
+  text-transform: capitalize;
+  display: block;
+  text-align: left;
+  z-index: 2;
 }
 .rfSheikhListItem .flag {
   position: absolute;
   right: 5%;
   border-bottom: none;
-  padding:5px 14px 2px;
-  bottom:10%;
+  padding: 5px 14px 2px;
+  bottom: 10%;
   z-index: 0;
   transition: all 250ms ease-in-out;
 }
 
-
-.rfSheikhListItem:hover{
+.rfSheikhListItem:hover {
   background-color: gainsboro;
 }
 /* .rfSheikhListItem:hover .flag{
@@ -51,3 +50,14 @@ text-align: left;
   
   bottom: 100%;
 } */
+
+.flagSection {
+  position: absolute;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 20px;
+  height: 15px;
+  top: 4px;
+  right: 5px;
+}
