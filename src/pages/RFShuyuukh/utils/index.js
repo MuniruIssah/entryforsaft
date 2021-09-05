@@ -291,13 +291,13 @@ export const Shuyuukh = [
     town: "Kaolack",
   },
   {
-    name: "heikh Hassan Cissey",
+    name: "Sheikh Hassan Cissey",
     country: "Senegal",
     profile: sheehu,
     town: "Kaolack",
   },
   {
-    name: "sheikh Ahmed Tijjani Cissey",
+    name: "Sheikh Ahmed Tijjani Cissey",
     country: "Senegal",
     profile: sheehu,
     town: "Kaolack",
