@@ -1,17 +1,19 @@
-import React from 'react';
-import './styles.css';
-import { DashboardOutlined,UserOutlined } from '@ant-design/icons'
-import { Avatar } from 'antd';
-const RFHeader = ({title}) => {
-  return <header className="rfHeader">
+import React from "react";
+import "./styles.css";
+import { DashboardOutlined, UserOutlined } from "@ant-design/icons";
+import { Avatar, Button } from "antd";
+import LoginCompoonent from "./components/LoginComponent";
+const RFHeader = ({ title }) => {
+  return (
+    <header className="rfHeader">
       <div>
-          {/* <div className="headerAppLogo" style={{backgroundImage:`url(${sheehu})`}}></div> */}
-          <span>{title}</span>
+        <span>{title}</span>
       </div>
       <div>
-          {/* <Avatar icon={<UserOutlined/>} /> */}
+         <LoginCompoonent/>
       </div>
-  </header>;
+    </header>
+  );
 };
 
 export default RFHeader;
