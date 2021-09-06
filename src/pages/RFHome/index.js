@@ -1,10 +1,10 @@
-import React from 'react';
-import DescriptionStrip from '../../components/DescriptionStrip';
-import sheehu from './assets/sheehu.JPG';
-import './styles.css';
-import RfAppCard from './components/AppCard';
-import RFHeader from '../../components/RFHeader';
-import RFAppListItem from './components/AppListItem';
+import React from "react";
+import DescriptionStrip from "../../components/DescriptionStrip";
+import sheehu from "./assets/sheehu.JPG";
+import "./styles.css";
+import RfAppCard from "./components/AppCard";
+import RFHeader from "../../components/RFHeader";
+import RFAppListItem from "./components/AppListItem";
 
 const AppList = [
   // {
@@ -13,23 +13,26 @@ const AppList = [
   //   image: sheehu,
   // },
   {
-    label: 'Shuyuukh',
-    description:"All Sheikhs of Tariqa",
-
+    label: "Shuyuukh",
+    description: "All Sheikhs of Tijjaniyya",
+    link: "shuyuukh",
     image: sheehu,
   },
-  {
-    label: "FAQ's",
-    description:"Frequently Asked Questions",
+  // {
+  //   label: "FAQ's",
+  //   description:"Frequently Asked Questions",
 
-    image: sheehu,
-  },
+  //   image: sheehu,
+  // },
 ];
 const RFHome = () => {
   return (
     <div className="rfHome">
-      <RFHeader title="TariqaOnline" />
-      <DescriptionStrip description="Where Everything Tariqa Lives" title="Tariqa Online"/>
+      <RFHeader title="Home" />
+      <DescriptionStrip
+        description="The Information hub of everything Tijaniyya"
+        title="Tijaniyya Online"
+      />
       <RfHomeContentWrapper />
     </div>
   );
@@ -42,7 +45,7 @@ const RfHomeContentWrapper = () => {
     <div className="rfHomeContentWrapper">
       <span className="allAppSpan">All Apps</span>
       <div className="appListWrapper">
-        {AppList.map(item => (
+        {AppList.map((item) => (
           <RFAppListItem key={item.label} {...item} />
         ))}
       </div>

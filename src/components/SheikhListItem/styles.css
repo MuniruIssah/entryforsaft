@@ -54,10 +54,13 @@
 .flagSection {
   position: absolute;
   z-index: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   width: 20px;
   height: 15px;
   top: 4px;
   right: 5px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
