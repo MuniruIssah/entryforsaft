@@ -14,6 +14,7 @@ const LoginCompoonent = () => {
       </Button>
       <Drawer
         placement="bottom"
+        title="Tijaniyya Online"
         height="100%"
         visible={showLoginDrawer}
         onClose={() => setShowLoginDrawer(false)}
@@ -34,12 +35,19 @@ const LoginCompoonent = () => {
                 <Input.Password size="large" />
               </Form.Item>
               <Form.Item>
-                <Button type="primary" size="large" className='myLoginButton' block>
+                <Button
+                  type="primary"
+                  size="large"
+                  className="myLoginButton"
+                  block
+                >
                   Login
                 </Button>
               </Form.Item>
             </Form>
-            <Button type="link">Go to Signup</Button>
+            <Button type="link" size="large" block>
+              Do not have an Account? Signup
+            </Button>
           </div>
         </div>
       </Drawer>
