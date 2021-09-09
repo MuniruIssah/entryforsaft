@@ -1,0 +1,43 @@
+.wirdCardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.wirdCardControls {
+  margin-bottom: 1rem;
+}
+.wirdCardDetails {
+  height: 100px;
+  width: min(1000px, 95%);
+  background-color: #373737;
+  border-radius: 20px;
+}
+.wirdLang {
+  border-radius: 15px;
+  color: #373737;
+  border: none;
+  transition: all 250ms ease-in-out;
+}
+.wirdLang:hover {
+  background-color: #373737;
+  color: white;
+  font-weight: 600;
+}
+.wirdLang:focus {
+  background-color: #373737;
+  color: white;
+  font-weight: 600;
+}
+.wirdCardControls .wirdLang {
+  margin-left: 10px;
+}
+.wirdCardControls .wirdLang:first-child {
+  margin-left: 0px;
+}
+
+.activeWirdLang {
+  background-color: #373737;
+  color: white;
+  font-weight: 600;
+}

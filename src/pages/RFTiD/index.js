@@ -4,6 +4,7 @@ import DescriptionStrip from "../../components/DescriptionStrip";
 import RFGridWrapper from "../../components/GridWrapper";
 import RFQuoteCard from "../../components/QuoteCard";
 import RFHeader from "../../components/RFHeader";
+import WirdCard from "./components/WirdCard";
 import "./styles.css";
 import { quotes } from "./utils";
 
@@ -17,9 +18,18 @@ const RFWird = () => {
         title="Wird"
         description="A detailed look at the components of  our wird"
       />
-      <Tabs defaultActiveKey="1" centered style={{margin:'0px 5px'}}>
+      <Tabs defaultActiveKey="1" centered style={{ margin: "0px 5px" }}>
         <TabPane tab="An-Niyyah" key="1">
-          <div></div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              width:'100%'
+            }}
+          >
+            <WirdCard />
+          </div>
         </TabPane>
         <TabPane tab="Al-Faatiha" key="2">
           <div></div>
