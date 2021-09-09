@@ -1,12 +1,37 @@
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Divider, Drawer, Form, Input } from "antd";
-import React from "react";
+import { Button, Divider, Drawer, Form, Input, message } from "antd";
+import React, { useRef } from "react";
 import "./styles.css";
 import { useState } from "react";
+import { useAuth } from "../../../../contexts/AuthContext";
 
 const LoginCompoonent = () => {
   const [showLoginDrawer, setShowLoginDrawer] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const { signUp } = useAuth();
+
+  const handleLogin = async () => {
+    try {
+      setError("");
+      setLoading(true);
+      console.log(email);
+
+      await signUp(email, password);
+      message.success("Successfully signed up");
+    } catch (error) {
+      setError("Failed to sign up");
+    }
+    setLoading(false);
+  };
+
   return (
     <>
       <Button type="text" onClick={() => setShowLoginDrawer(true)}>
@@ -27,12 +52,32 @@ const LoginCompoonent = () => {
               Sign In with Google
             </Button>
             <Divider>or</Divider>
-            <Form layout="vertical">
-              <Form.Item label="Email">
-                <Input size="large" type="email" />
+            <Form layout="vertical" onFinish={handleLogin}>
+              <Form.Item
+                label="Email"
+                rules={[
+                  { required: true, message: "Please enter your email!" },
+                ]}
+              >
+                <Input
+                  size="large"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </Form.Item>
-              <Form.Item label="Password">
-                <Input.Password size="large" />
+              <Form.Item
+                label="Password"
+                rules={[
+                  { required: true, message: "Please enter your password!" },
+                ]}
+                ref={passwordRef}
+              >
+                <Input.Password
+                  size="large"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </Form.Item>
               <Form.Item>
                 <Button
@@ -40,6 +85,8 @@ const LoginCompoonent = () => {
                   size="large"
                   className="myLoginButton"
                   block
+                  disabled={loading}
+                  htmlType="submit"
                 >
                   Login
                 </Button>

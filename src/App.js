@@ -11,31 +11,38 @@ import RFAskUs from "./pages/RFAskUs";
 import RFShuyuukh from "./pages/RFShuyuukh";
 import RFNews from "./pages/RFNews";
 import RFQuotes from "./pages/RFQuotes";
+import AuthProvider from "./contexts/AuthContext";
+import RFWird from "./pages/RFTiD";
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <RFHome />
-          </Route>
-          <Route path="/shuyuukh">
-            <RFShuyuukh />
-          </Route>
-          {/* <Route path="/faqs" >
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <RFHome />
+            </Route>
+            <Route path="/shuyuukh">
+              <RFShuyuukh />
+            </Route>
+            <Route path="/wird">
+              <RFWird />
+            </Route>
+            {/* <Route path="/faqs" >
             <RFFaqs/>
           </Route>
           <Route path="/askUs" >
             <RFAskUs/>
           </Route> */}
-          {/* <Route path="/news" >
+            {/* <Route path="/news" >
             <RFNews/>
           </Route>
           <Route path="/quotes" >
             <RFQuotes/>
           </Route> */}
-        </Switch>
-      </Router>
+          </Switch>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
