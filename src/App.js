@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "antd/dist/antd.css";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./ui/home";
 import Entry from "./ui/entry";
@@ -13,6 +14,8 @@ import RFNews from "./pages/RFNews";
 import RFQuotes from "./pages/RFQuotes";
 import AuthProvider from "./contexts/AuthContext";
 import RFWird from "./pages/RFTiD";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 function App() {
   return (
     <div className="App">
@@ -28,6 +31,7 @@ function App() {
             <Route path="/wird">
               <RFWird />
             </Route>
+          
             {/* <Route path="/faqs" >
             <RFFaqs/>
           </Route>

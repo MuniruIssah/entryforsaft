@@ -1,0 +1,7 @@
+.sheikhMapWrapper {
+  position: relative;
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 150px;
+}

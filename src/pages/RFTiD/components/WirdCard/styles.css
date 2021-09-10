@@ -10,8 +10,9 @@
 .wirdCardDetails {
   height: 100px;
   width: min(1000px, 95%);
-  background-color: #373737;
+  background: #373737; /* Old browsers */
   border-radius: 20px;
+  position: "relative";
 }
 .wirdLang {
   border-radius: 15px;

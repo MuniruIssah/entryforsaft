@@ -4,7 +4,13 @@ import { UserOutlined } from "@ant-design/icons";
 import Avatar from "antd/lib/avatar/avatar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.css";
-import { faMapMarkerAlt, faMapPin } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+  faMapMarkerAlt,
+  faMapPin,
+} from "@fortawesome/free-solid-svg-icons";
+import SheikhDrawerMap from "../SheikhDrawerMap";
 const SheikhDrawer = ({ visible, onClose, sheikh }) => {
   return (
     <Drawer
@@ -23,22 +29,33 @@ const SheikhDrawer = ({ visible, onClose, sheikh }) => {
         size={100}
       />
       <span className="location">
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           icon={faMapMarkerAlt}
           style={{ fontSize: 20, color: "#b80000" }}
-        />{" "}
+        />{" "} */}
         {sheikh.town}, {sheikh.country}
       </span>
-      <Image.PreviewGroup>
-        <div className="sheikhDrawerGallery">
-          <Image src="https://via.placeholder.com/100" />
-          <Image src="https://via.placeholder.com/100" />
-          <Image src="https://via.placeholder.com/100" />
-          <Image src="https://via.placeholder.com/100" />
-          <Image src="https://via.placeholder.com/100" />
-          <Image src="https://via.placeholder.com/100" />
-        </div>
-      </Image.PreviewGroup>
+      <SheikhDrawerMap />
+      <details className="sheikhImageAccordion">
+        <summary>
+          <span>Expand Images</span>
+          <FontAwesomeIcon
+            style={{ color: "grey", fontSize: 13 }}
+            icon={faChevronRight}
+          />
+        </summary>
+        <Image.PreviewGroup>
+          <div className="sheikhDrawerGallery">
+            <Image src="https://via.placeholder.com/90" />
+            <Image src="https://via.placeholder.com/90" />
+            <Image src="https://via.placeholder.com/90" />
+            <Image src="https://via.placeholder.com/90" />
+            <Image src="https://via.placeholder.com/90" />
+            <Image src="https://via.placeholder.com/90" />
+          </div>
+        </Image.PreviewGroup>
+      </details>
+      {/* */}
     </Drawer>
   );
 };
