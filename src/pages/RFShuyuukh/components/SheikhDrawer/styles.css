@@ -29,6 +29,7 @@
   display: flex;
   cursor: pointer;
   align-items: center;
+  flex-direction: row;
   justify-content: space-between;
   color: black;
   border: 1px solid gainsboro;
