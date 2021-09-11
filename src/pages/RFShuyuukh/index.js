@@ -59,7 +59,7 @@ const RFShuyuukh = () => {
       duration: 0,
       placement: "bottomRight",
       description:
-        "Please note this list is not in any order, and the team are working at new features",
+        "Please note that this list is not in any order, and the team are working at new features",
     });
   }, []);
   return (

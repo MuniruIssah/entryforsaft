@@ -35,10 +35,6 @@ const SheikhDrawer = ({ visible, onClose, sheikh }) => {
       <details className="sheikhImageAccordion">
         <summary>
           <span>Expand Images</span>
-          <FontAwesomeIcon
-            style={{ color: "grey", fontSize: 13 }}
-            icon={faChevronRight}
-          />
         </summary>
         <Image.PreviewGroup>
           <div className="sheikhDrawerGallery">
