@@ -35,11 +35,6 @@ const RFShuyuukh = () => {
       onFilter: handleFilterChange,
     },
     {
-      label: "Morocco",
-      active: filterBy === "Morocco" ? true : false,
-      onFilter: handleFilterChange,
-    },
-    {
       label: "Senegal",
       active: filterBy === "Senegal" ? true : false,
       onFilter: handleFilterChange,
