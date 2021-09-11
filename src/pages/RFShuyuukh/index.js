@@ -61,7 +61,7 @@ const RFShuyuukh = () => {
       duration: 0,
       placement: "bottomRight",
       description:
-        "Please note that this list is not in any order, and the team are working at new features",
+        "Please note that this list is not in any order, and the team is working on new features",
     });
   }, []);
   return (
@@ -126,7 +126,9 @@ const MobileFilterButton = ({ icon, label, active, onFilter }) => {
   return (
     <button
       type="button"
-      onClick={() => (label === "All Sheikhs" ? onFilter("all") : onFilter(label))}
+      onClick={() =>
+        label === "All Sheikhs" ? onFilter("all") : onFilter(label)
+      }
       className={`mobileFilterButton ${active ? "activeMFButton" : ""}`}
     >
       {label}
