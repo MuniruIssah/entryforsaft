@@ -8,7 +8,7 @@
 
 .rfFilterAndGrid .filterSection .filterSectionInner {
   position: sticky;
-  top: 7vh;
+  top: 0;
 }
 
 .rfFilterAndGrid .gridSection {

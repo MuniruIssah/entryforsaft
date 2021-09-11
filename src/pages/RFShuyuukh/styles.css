@@ -5,7 +5,7 @@
   z-index: 10;
   margin-top: 1rem;
   position: sticky;
-  top: 8vh;
+  top: 3vh;
 }
 
 .iconBlock {
@@ -29,6 +29,7 @@
   border-top: 1px solid gainsboro;
   height: 50px;
   position: fixed;
+  box-shadow: 0px 2px 2px 3px rgb(212, 212, 212, 0.5);
   z-index: 2;
   width: 100%;
   bottom: 0;
@@ -40,7 +41,7 @@
 
 /* Mobile Filter Button */
 .mobileFilterButton {
-  margin: 0px 5px;
+  margin: 0px 10px;
   font-size: 12px;
   height: 25px;
   padding-left: 7px;
