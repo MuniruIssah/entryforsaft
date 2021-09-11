@@ -1,13 +1,12 @@
-.viewControlStrip{
+.viewControlStrip {
   display: flex;
   justify-content: flex-end;
   padding-right: 3.5%;
   z-index: 10;
-  margin-top:1rem;
-  position:sticky;
-  top:8vh;
+  margin-top: 1rem;
+  position: sticky;
+  top: 8vh;
 }
-
 
 .iconBlock {
   padding: 5px 10px;
@@ -19,9 +18,40 @@
   color: hsl(0, 0%, 43%);
 }
 
-.activeIcon{
+.activeIcon {
   background-color: #373737 !important;
   color: lightgray !important;
   border: none;
+}
 
+.bottomFilters {
+  background-color: white;
+  border-top: 1px solid gainsboro;
+  height: 50px;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: scroll;
+}
+
+/* Mobile Filter Button */
+.mobileFilterButton {
+  margin: 0px 5px;
+  font-size: 12px;
+  height: 30px;
+  padding-left: 7px;
+  padding-right: 7px;
+
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+}
+
+.activeMFButton {
+  color: white;
+  background-color: #373737;
 }

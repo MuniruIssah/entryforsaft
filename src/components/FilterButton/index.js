@@ -4,7 +4,9 @@ const RFFilterButton = ({ label, active, onFilter }) => {
   return (
     <button
       type="button"
-      onClick={() => (label === "All" ? onFilter("all") : onFilter(label))}
+      onClick={() =>
+        label === "All Sheikhs" ? onFilter("all") : onFilter(label)
+      }
       className={`rfFilterButton ${active ? "active" : ""}`}
     >
       {label}

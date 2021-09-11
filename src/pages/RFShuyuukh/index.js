@@ -8,7 +8,9 @@ import RFGridWrapper from "../../components/GridWrapper";
 import RFSheikhListItem from "../../components/SheikhListItem";
 import { UnorderedListOutlined, AppstoreOutlined } from "@ant-design/icons";
 import RFSheikhCard from "../../components/SheikhCard";
-import { Empty, notification } from "antd";
+import { Col, Empty, notification, Row } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 const RFShuyuukh = () => {
   //states
   const [list, setList] = useState(true);
@@ -28,7 +30,7 @@ const RFShuyuukh = () => {
   //All Filters
   const Filters = [
     {
-      label: "All",
+      label: "All Sheikhs",
       active: filterBy === "all" ? true : false,
       onFilter: handleFilterChange,
     },
@@ -93,6 +95,15 @@ const RFShuyuukh = () => {
             <Empty description="There are no sheikhs yet" />
           )}
         </RFGridWrapper>
+        <Row>
+          <Col md={0} xs={24}>
+            <div className="bottomFilters">
+              {Filters.map((item) => (
+                <MobileFilterButton key={item.label} {...item} />
+              ))}
+            </div>
+          </Col>
+        </Row>
       </FilterAndGrid>
     </div>
   );
@@ -108,5 +119,17 @@ const IconBlock = ({ children, onClick, active }) => {
     >
       {children}
     </div>
+  );
+};
+
+const MobileFilterButton = ({ icon, label, active, onFilter }) => {
+  return (
+    <button
+      type="button"
+      onClick={() => (label === "All Sheikhs" ? onFilter("all") : onFilter(label))}
+      className={`mobileFilterButton ${active ? "activeMFButton" : ""}`}
+    >
+      {label}
+    </button>
   );
 };

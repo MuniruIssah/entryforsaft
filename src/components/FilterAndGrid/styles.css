@@ -13,4 +13,5 @@
 
 .rfFilterAndGrid .gridSection {
   padding-bottom: 3rem;
+  position: relative;
 }
