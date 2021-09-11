@@ -29,13 +29,9 @@ const SheikhDrawer = ({ visible, onClose, sheikh }) => {
         size={100}
       />
       <span className="location">
-        {/* <FontAwesomeIcon
-          icon={faMapMarkerAlt}
-          style={{ fontSize: 20, color: "#b80000" }}
-        />{" "} */}
         {sheikh.town}, {sheikh.country}
       </span>
-      <SheikhDrawerMap />
+      <SheikhDrawerMap town={sheikh.town} />
       <details className="sheikhImageAccordion">
         <summary>
           <span>Expand Images</span>

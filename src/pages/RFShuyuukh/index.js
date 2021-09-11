@@ -8,7 +8,7 @@ import RFGridWrapper from "../../components/GridWrapper";
 import RFSheikhListItem from "../../components/SheikhListItem";
 import { UnorderedListOutlined, AppstoreOutlined } from "@ant-design/icons";
 import RFSheikhCard from "../../components/SheikhCard";
-import { Empty } from "antd";
+import { Empty, notification } from "antd";
 const RFShuyuukh = () => {
   //states
   const [list, setList] = useState(true);
@@ -53,7 +53,15 @@ const RFShuyuukh = () => {
       onFilter: handleFilterChange,
     },
   ];
-
+  useEffect(() => {
+    notification.warning({
+      message: "Important Notice",
+      duration: 0,
+      placement: "bottomRight",
+      description:
+        "Please note this list is not in any order, and the team are working at new features",
+    });
+  }, []);
   return (
     <div className="rfAskUs">
       <RFHeader title="Shuyuukh" />
