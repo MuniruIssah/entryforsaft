@@ -1,22 +1,34 @@
-import React, { useContext, useState,useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import {
   signOut,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
+  onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../backend/config";
+import { Spin } from "antd";
 const AuthContext = React.createContext();
-
+//using the context
 export function useAuth() {
   return useContext(AuthContext);
 }
 
+//provide then cotext
 export default function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
-  function signUp(email, password) {
-    return createUserWithEmailAndPassword(auth, email, password);
+  async function signUp(email, password, username) {
+    await createUserWithEmailAndPassword(auth, email, password)
+      .then(function (userCredential) {
+        return updateProfile(userCredential.user, {
+          displayName: username,
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   function login(email, password) {
@@ -25,9 +37,9 @@ export default function AuthProvider({ children }) {
   function logout() {
     return signOut(auth);
   }
-//   function resetPassword(email) {
-//     return sendPasswordResetEmail(auth, email);
-//   }
+  //   function resetPassword(email) {
+  //     return sendPasswordResetEmail(auth, email);
+  //   }
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
@@ -44,5 +56,17 @@ export default function AuthProvider({ children }) {
     logout,
     // resetPassword,
   };
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={value}>
+      {loading ? <Loader /> : <> {children}</>}
+    </AuthContext.Provider>
+  );
 }
+
+const Loader = () => {
+  return (
+    <div style={{width:'100vw',height:'100vh',display:'flex',justifyContent:'center',alignItems:'center'}}>
+      <Spin size="large" />
+    </div>
+  );
+};
