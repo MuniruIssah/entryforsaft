@@ -40,7 +40,7 @@ const ProfileNavigation = () => {
   );
   return (
     <Dropdown overlay={menu} trigger={["hover"]}>
-      <Avatar icon={<UserOutlined />} size="small" />
+      <Avatar icon={<UserOutlined />}/>
     </Dropdown>
   );
 };
