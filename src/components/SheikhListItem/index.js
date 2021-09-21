@@ -11,10 +11,9 @@ import "./styles.css";
 import SheikhDrawer from "../../pages/RFShuyuukh/components/SheikhDrawer";
 import { countryColors } from "../../utils";
 const RFSheikhListItem = ({
-  image = sheehu,
   name = "Sheikh Ibrahim Inyass",
   country,
-  profile,
+  profile=sheehu,
   town,
 }) => {
   const [showSheikhDrawer, setShowSheikhDrawer] = useState(false);
@@ -41,7 +40,7 @@ const RFSheikhListItem = ({
       >
         <div
           className="sheikhImage"
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${profile})` }}
         ></div>
         <div className="sheikhDetails">
           <span>{name}</span>

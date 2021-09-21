@@ -22,12 +22,16 @@ const SheikhDrawer = ({ visible, onClose, sheikh }) => {
       width="min(420px,100vw)"
       placement="right"
     >
-      <Avatar
+       <div
+          className="sheikhImage"
+          style={{ backgroundImage: `url(${sheikh.profile})` }}
+        ></div>
+      {/* <Avatar
         src={sheikh.profile}
-        style={{ border: "1px solid gainsboro" }}
+        style={{ border: "1px solid gainsboro" ,backgroundPosition:'top center'}}
         icon={<UserOutlined />}
         size={100}
-      />
+      /> */}
       <span className="location">
         {sheikh.town}, {sheikh.country}
       </span>

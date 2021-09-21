@@ -9,11 +9,11 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 const RFSheikhCard = ({
-  image = sheehu,
+  profile = sheehu,
   name = "Sheikh Ibrahim Inyass",
   country,
   town,
-  profile,
+  
 }) => {
   const [showSheikhDrawer, setShowSheikhDrawer] = useState(false);
   return (
@@ -26,7 +26,7 @@ const RFSheikhCard = ({
       <div className="rfSheikhCard" onClick={() => setShowSheikhDrawer(true)}>
         <div
           className="sheikhImage"
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${profile})` }}
         ></div>
         <div className="sheikhDetails">
           <span>{name}</span>

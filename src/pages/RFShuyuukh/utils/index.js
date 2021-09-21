@@ -1,4 +1,32 @@
 import sheehu from "../../../assets/sheehu.JPG";
+import sheikh_osman_nuhu_sharubutu1 from "../assets/shuyuukh/sheikh_osman_nuhu_sharubutu/1.jpeg";
+import sheikh_abdul_qadir_zaria1 from "../assets/shuyuukh/sheikh_abdul_qadir_zaria/1.jpeg";
+import sheikh_abdullah_maikano1 from "../assets/shuyuukh/sheikh_abdullah_maikano/1.jpeg";
+import sheikh_abul_fatihi1 from "../assets/shuyuukh/sheikh_abul_fatihi/1.jpeg";
+import sheikh_abubakar_almiskin1 from "../assets/shuyuukh/sheikh_abubakar_almiskin/1.jpeg";
+import sheikh_adam_dan_kilori1 from "../assets/shuyuukh/sheikh_adam_dan_kilori/1.jpeg";
+import sheikh_aliyu_cisse1 from "../assets/shuyuukh/sheikh_aliyu_cisse/1.jpeg";
+import sheikh_aliyu_harazimi1 from "../assets/shuyuukh/sheikh_aliyu_harazimi/1.jpeg";
+import sheikh_atiku_sanka1 from "../assets/shuyuukh/sheikh_atiku_sanka/1.jpeg";
+import sheikh_baba_waiz1 from "../assets/shuyuukh/sheikh_baba_waiz/1.jpeg";
+import sheikh_baban_makaranta1 from "../assets/shuyuukh/sheikh_baban_makaranta/1.jpeg";
+import sheikh_dan_tani_bawku1 from "../assets/shuyuukh/sheikh_dan_tani_bawku/1.jpeg";
+import sheikh_garba_hakim1 from "../assets/shuyuukh/sheikh_garba_hakim/1.jpeg";
+// import sheikh_harouna1 from "../assets/shuyuukh/sheikh_harouna/1.jpeg";
+import sheikh_jamal_baba1 from "../assets/shuyuukh/sheikh_jamal_baba/1.jpeg";
+import sheikh_jamiu_bulaala1 from "../assets/shuyuukh/sheikh_jamiu_bulaala/1.jpeg";
+import sheikh_mahmud_gibrima1 from "../assets/shuyuukh/sheikh_mahmud_gibrima/1.jpeg";
+import sheikh_mai_hula1 from "../assets/shuyuukh/sheikh_mai_hula/1.jpeg";
+import sheikh_nasirudeen_kumasi1 from "../assets/shuyuukh/sheikh_nasirudeen_kumasi/1.jpeg";
+import sheikh_salis_shaban1 from "../assets/shuyuukh/sheikh_salis_shaban/1.jpeg";
+import sheikh_sani_kafanga1 from "../assets/shuyuukh/sheikh_sani_kafanga/1.jpeg";
+import sheikh_sani_murtala1 from "../assets/shuyuukh/sheikh_sani_murtala/1.jpeg";
+import sheikh_tahiru_bauchi1 from "../assets/shuyuukh/sheikh_tahiru_bauchi/1.jpeg";
+import sheikh_tijani_usman1 from "../assets/shuyuukh/sheikh_tijani_usman/1.jpeg";
+import sheikh_yahuza_zaria1 from "../assets/shuyuukh/sheikh_yahuza_zaria/1.jpeg";
+import sheikh_yahyal_amin1 from "../assets/shuyuukh/sheikh_yahyal_amin/1.jpeg";
+import sheikh_zulkarnain_askandar1 from "../assets/shuyuukh/sheikh_zulkarnain_askandar/1.jpeg";
+
 export const Shuyuukh = [
   {
     name: "Sheikh Umar Karkee",
@@ -21,13 +49,13 @@ export const Shuyuukh = [
   {
     name: "Sheikh Ahmad Muhammad Dan Tani",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_dan_tani_bawku1,
     town: "Bawku",
   },
   {
     name: "Sheikh Abdullahi Ahmad Maikano",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_abdullah_maikano1,
     town: "Prang",
   },
   {
@@ -40,13 +68,13 @@ export const Shuyuukh = [
   {
     name: "Sheikh Baaban Makaranta ",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_baban_makaranta1,
     town: "Kumasi",
   },
   {
     name: "Sheikh Baabal Waa'iz",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_baba_waiz1,
     town: "Kumasi",
   },
   {
@@ -58,26 +86,26 @@ export const Shuyuukh = [
   {
     name: "Sheikh Garba Hakim",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_garba_hakim1,
     town: "Kumasi",
   },
   {
-    name: "Sheikh Hassan Nasurudeen",
+    name: "Sheikh Hassan Nasirudeen",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_nasirudeen_kumasi1,
     town: "Kumasi",
   },
   {
     name: "Sheikh Usman Nuhu Sharubutu",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_osman_nuhu_sharubutu1,
     town: "Accra",
   },
 
   {
     name: "Sheikh Muhammad Salis Shaban",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_salis_shaban1,
     town: "Accra",
   },
   {
@@ -113,7 +141,7 @@ export const Shuyuukh = [
   {
     name: "Sheikh Jamal Baaba",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_jamal_baba1,
     town: "Accra",
   },
   {
@@ -125,7 +153,7 @@ export const Shuyuukh = [
   {
     name: "Sheikh Sani Murtala",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_sani_murtala1,
     town: "Accra",
   },
   {
@@ -137,13 +165,13 @@ export const Shuyuukh = [
   {
     name: "Sheikh Yahyal Amin",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_yahyal_amin1,
     town: "Accra",
   },
   {
-    name: "Sheikh Zulkanain Askandar",
+    name: "Sheikh Zulkarnain Askandar",
     country: "Ghana",
-    profile: sheehu,
+    profile: sheikh_zulkarnain_askandar1,
     town: "Salaga",
   },
   {
@@ -161,7 +189,7 @@ export const Shuyuukh = [
   {
     name: "Sheikh Mahmud Gibrima",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_mahmud_gibrima1,
     town: "Guru",
   },
   {
@@ -173,67 +201,67 @@ export const Shuyuukh = [
   {
     name: "Sheikh Atiku Sanka",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_atiku_sanka1,
     town: "Kano",
   },
   {
     name: "Sheikh Sani Kafanga",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_sani_kafanga1,
     town: "Kano",
   },
   {
     name: "Sheikh Mai Hula",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_mai_hula1,
     town: "Kano",
   },
   {
     name: "Sheikh Aliyu Harazimi",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_aliyu_harazimi1,
     town: "Kano",
   },
   {
-    name: "Sheikh Abul Fathi",
+    name: "Sheikh Abul Fatihi",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_abul_fatihi1,
     town: "Maiduguri",
   },
   {
     name: "Sheikh Adam Dan Kilori",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_adam_dan_kilori1,
     town: "Maiduguri",
   },
   {
     name: "Sheikh Almiskin",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_abubakar_almiskin1,
     town: "Maiduguri",
   },
   {
     name: "Sheikh Tahiru Bauchi",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_tahiru_bauchi1,
     town: "Bauchi",
   },
   {
     name: "Sheikh Jamiu Bulala",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_jamiu_bulaala1,
     town: "Ofa",
   },
   {
     name: "Sheikh Yahuza Zaria",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_yahuza_zaria1,
     town: "Zaria",
   },
   {
     name: "Sheikh Abdul Qadir Zaria",
     country: "Nigeria",
-    profile: sheehu,
+    profile: sheikh_abdul_qadir_zaria1,
     town: "Zaria",
   },
   {
@@ -269,7 +297,7 @@ export const Shuyuukh = [
   {
     name: "Sheikh Aliyu Cissey",
     country: "Senegal",
-    profile: sheehu,
+    profile: sheikh_aliyu_cisse1,
     town: "Kaolack",
   },
   {
