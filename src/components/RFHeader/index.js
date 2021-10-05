@@ -1,9 +1,14 @@
 import React from "react";
 import "./styles.css";
-import { DashboardOutlined, UserOutlined } from "@ant-design/icons";
+import {
+  DashboardOutlined,
+  UserOutlined,
+  AppstoreOutlined,
+} from "@ant-design/icons";
 import { Avatar, Button, Dropdown, Menu, message } from "antd";
 import LoginCompoonent from "../LoginComponent";
 import { useAuth } from "../../contexts/AuthContext";
+import { Link } from "react-router-dom";
 const RFHeader = ({ title }) => {
   const { currentUser } = useAuth();
   return (
@@ -11,7 +16,9 @@ const RFHeader = ({ title }) => {
       <div>
         <span>{title}</span>
       </div>
-      <div>{currentUser ? <ProfileNavigation /> : <LoginCompoonent />}</div>
+      <div className="rfHeaderSecondSection">
+        {currentUser ? <ProfileNavigation /> : <LoginCompoonent />}
+      </div>
     </header>
   );
 };
@@ -30,7 +37,9 @@ const ProfileNavigation = () => {
   };
   const menu = (
     <Menu>
-      <Menu.Item>Profile</Menu.Item>
+      <Menu.Item>
+        <Link to="/profile">Profile</Link>
+      </Menu.Item>
       <Menu.Item>
         <Button block type="primary" danger onClick={handleSignOut}>
           Logout
@@ -40,7 +49,7 @@ const ProfileNavigation = () => {
   );
   return (
     <Dropdown overlay={menu} trigger={["click"]}>
-      <Avatar icon={<UserOutlined />}/>
+      <Avatar size={28} icon={<UserOutlined />} />
     </Dropdown>
   );
 };

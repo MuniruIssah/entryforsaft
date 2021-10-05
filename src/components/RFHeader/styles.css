@@ -29,3 +29,8 @@
     background-repeat: no-repeat;
     margin-right: 5px;
 }
+
+.rfHeaderSecondSection{
+    display: flex;
+    align-items: center;
+}

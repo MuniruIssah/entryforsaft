@@ -12,6 +12,8 @@ import RFQuotes from "./pages/RFQuotes";
 import AuthProvider from "./contexts/AuthContext";
 import RFWird from "./pages/RFTiD";
 import "leaflet/dist/leaflet.css";
+import Profile from "./pages/Profile";
+import StaffDashboard from "./pages/Staff-Dashboard";
 function App() {
 
   return (
@@ -28,7 +30,12 @@ function App() {
             <Route path="/wird">
               <RFWird />
             </Route>
-
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/staff">
+              <StaffDashboard />
+            </Route>
             {/* <Route path="/faqs" >
             <RFFaqs/>
           </Route>
