@@ -14,43 +14,45 @@ import RFWird from "./pages/RFTiD";
 import "leaflet/dist/leaflet.css";
 import Profile from "./pages/Profile";
 import StaffDashboard from "./pages/Staff-Dashboard";
+import ProfileProvider from "./contexts/ProfileContext";
 function App() {
-
   return (
     <div className="App">
-      <AuthProvider>
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <RFHome />
-            </Route>
-            <Route path="/shuyuukh">
-              <RFShuyuukh />
-            </Route>
-            <Route path="/wird">
-              <RFWird />
-            </Route>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route path="/staff">
-              <StaffDashboard />
-            </Route>
-            {/* <Route path="/faqs" >
+      <ProfileProvider>
+        <AuthProvider>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <RFHome />
+              </Route>
+              <Route path="/shuyuukh">
+                <RFShuyuukh />
+              </Route>
+              <Route path="/wird">
+                <RFWird />
+              </Route>
+              <Route path="/profile">
+                <Profile />
+              </Route>
+              <Route path="/staff">
+                <StaffDashboard />
+              </Route>
+              {/* <Route path="/faqs" >
             <RFFaqs/>
           </Route>
           <Route path="/askUs" >
             <RFAskUs/>
           </Route> */}
-            {/* <Route path="/news" >
+              {/* <Route path="/news" >
             <RFNews/>
           </Route>
           <Route path="/quotes" >
             <RFQuotes/>
           </Route> */}
-          </Switch>
-        </Router>
-      </AuthProvider>
+            </Switch>
+          </Router>
+        </AuthProvider>
+      </ProfileProvider>
     </div>
   );
 }
