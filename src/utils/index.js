@@ -20,3 +20,18 @@ export const countryColors = {
     third: "#C1272D",
   },
 };
+
+export const AllPages=[
+  {
+    name:'All Apps',
+    link:'/'
+  },
+  {
+    name:'Shuyuukh',
+    link:'/shuyuukh' 
+  },
+  {
+    name:'Wird',
+    link:'/wird' 
+  },
+]

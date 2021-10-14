@@ -15,6 +15,7 @@ import "leaflet/dist/leaflet.css";
 import Profile from "./pages/Profile";
 import StaffDashboard from "./pages/Staff-Dashboard";
 import ProfileProvider from "./contexts/ProfileContext";
+import AppListStripLayout from "./layouts/AppListStripLayout";
 function App() {
   return (
     <div className="App">
@@ -36,6 +37,9 @@ function App() {
               </Route>
               <Route path="/staff">
                 <StaffDashboard />
+              </Route>
+              <Route path="/test">
+                <AppListStripLayout />
               </Route>
               {/* <Route path="/faqs" >
             <RFFaqs/>
