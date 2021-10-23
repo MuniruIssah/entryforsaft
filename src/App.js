@@ -41,18 +41,18 @@ function App() {
               <Route path="/test">
                 <AppListStripLayout />
               </Route>
-              {/* <Route path="/faqs" >
+              <Route path="/faqs" >
             <RFFaqs/>
           </Route>
           <Route path="/askUs" >
             <RFAskUs/>
-          </Route> */}
-              {/* <Route path="/news" >
+          </Route>
+              <Route path="/news" >
             <RFNews/>
           </Route>
           <Route path="/quotes" >
             <RFQuotes/>
-          </Route> */}
+          </Route>
             </Switch>
           </Router>
         </AuthProvider>

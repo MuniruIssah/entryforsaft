@@ -8,7 +8,7 @@ import { faPen, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 const ProfileCard = ({ name }) => {
   return (
     <Row className="profileCard">
-      <FirstColumn />
+      <FirstColumn name={name.slice(0, 1)} />
       <SecondColumn name={name} />
     </Row>
   );
@@ -16,17 +16,17 @@ const ProfileCard = ({ name }) => {
 
 export default ProfileCard;
 
-const FirstColumn = () => {
+const FirstColumn = ({ name }) => {
   return (
     <>
       <Col md={5} xs={0}>
         <div className="avatarColumn">
-          <Avatar size={70} icon={<UserOutlined />} />
+          <Avatar size={70} style={{backgroundColor:'#373737'}}> {name}</Avatar>
         </div>
       </Col>
       <Col md={0} xs={24}>
         <div className="avatarColumn">
-          <Avatar size={40} icon={<UserOutlined />} />
+          <Avatar size={40}> {name}</Avatar>
         </div>
       </Col>
     </>

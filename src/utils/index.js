@@ -1,3 +1,5 @@
+import { faStream, faThLarge, faUsers } from "@fortawesome/free-solid-svg-icons";
+
 export const countryColors = {
   Ghana: {
     first: "#CE1126",
@@ -24,14 +26,17 @@ export const countryColors = {
 export const AllPages=[
   {
     name:'All Apps',
-    link:'/'
+    link:'/',
+    icon:faThLarge
   },
   {
     name:'Shuyuukh',
-    link:'/shuyuukh' 
+    link:'/shuyuukh',
+    icon:faUsers 
   },
   {
     name:'Wird',
-    link:'/wird' 
+    link:'/wird',
+    icon:faStream 
   },
 ]

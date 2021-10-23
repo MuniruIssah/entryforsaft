@@ -2,16 +2,41 @@
   display: flex;
   width: 100vw;
   height: 6vh;
+  padding: 0px 10px;
   align-items: center;
-  justify-content: center;
-  background-color: whitesmoke;
+  justify-content: flex-start;
+  background-color: #030303;
 }
 .appHolder {
-  color: white;
-  background-color: #373737;
+  color: #373737;
+  background-color: rgb(219, 219, 219);
   /* height: 4vh; */
-  font-size: 12px;
+  border-radius: 5px;
+  font-size: 11px;
   padding: 0.5rem;
-  margin: 0px 0.3rem;
+  margin: 0px 0.5rem;
   /* border-radius: 7px;*/
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+.appHolder .appHIcon {
+  background-color: #373737;
+  margin-right: 5px;
+  color: whitesmoke;
+  font-size: 17px;
+  padding: 3.5px;
+  border-radius: 4px;
+}
+
+.current {
+  background-color: #373737;
+  color: whitesmoke;
+}
+.current .appHIcon {
+  background-color: whitesmoke;
+  color: #373737;
 }

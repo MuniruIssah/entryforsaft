@@ -17,6 +17,10 @@ import {
   useLocation,
 } from "react-router-dom";
 import "./styles.css";
+import StaffMain from "./pages/Main";
+import StaffCreation from "./pages/Create";
+import StaffAllApps from "./pages/AllApps";
+import StaffIssues from "./pages/Issues";
 const { Header, Content, Footer, Sider } = Layout;
 
 const StaffDashboard = () => {
@@ -95,11 +99,11 @@ const StaffDashboard = () => {
           }}
         >
           <Switch>
-            <Route path={`${path}/issues`}>These are all the issues</Route>
-            <Route path={`${path}/apps`}>These are all the apps</Route>
-            <Route path={`${path}/create`}>This is the canvas</Route>
+            <Route path={`${path}/issues`}><StaffIssues/></Route>
+            <Route path={`${path}/apps`}><StaffAllApps/></Route>
+            <Route path={`${path}/create`}><StaffCreation/></Route>
             <Route exact path={path}>
-              Main Dashboard
+              <StaffMain/>
             </Route>
           </Switch>
         </div>

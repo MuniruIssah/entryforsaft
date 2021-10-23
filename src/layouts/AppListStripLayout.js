@@ -1,10 +1,28 @@
+// import { faTh } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Avatar } from "antd";
+import { AppstoreFilled } from "@ant-design/icons";
+
 import React from "react";
 import { AllPages } from "../utils";
 import "./styles.css";
-const AppListStripLayout = () => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTh, faThLarge } from "@fortawesome/free-solid-svg-icons";
+import RFHeader from "../components/RFHeader";
+import DescriptionStrip from "../components/DescriptionStrip";
+const AppListStripLayout = ({
+  title='Test',
+  children,
+  description='i am the description',
+  descriptionTitle='Test Page',
+}) => {
   return (
-    <div>
+    <div className="rfAskUs">
+      <RFHeader title={title} />
       <AppStrip />
+      <DescriptionStrip title={descriptionTitle} description={description} />
+
+      {children}
     </div>
   );
 };
@@ -21,6 +39,11 @@ const AppStrip = () => {
   );
 };
 
-const AppHolder = ({ name }) => {
-  return <div className='appHolder'>{name}</div>;
+const AppHolder = ({ name, icon }) => {
+  return (
+    <div className="appHolder current">
+      <FontAwesomeIcon className="appHIcon" icon={icon} />
+      <span>{name}</span>
+    </div>
+  );
 };
