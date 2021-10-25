@@ -34,9 +34,19 @@ export const AllPages=[
     link:'/shuyuukh',
     icon:faUsers 
   },
-  {
-    name:'Wird',
-    link:'/wird',
-    icon:faStream 
-  },
+  // {
+  //   name:'Wird',
+  //   link:'/wird',
+  //   icon:faStream 
+  // },
+  // {
+  //   name:'Ask',
+  //   link:'/wird',
+  //   icon:faStream 
+  // },
+  // {
+  //   name:'FAQs',
+  //   link:'/wird',
+  //   icon:faStream 
+  // },
 ]

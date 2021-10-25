@@ -9,9 +9,11 @@ import { Avatar, Button, Dropdown, Menu, message } from "antd";
 import LoginCompoonent from "../LoginComponent";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
+import { AppStrip } from "../../layouts/AppListStripLayout";
 const RFHeader = ({ title }) => {
   const { currentUser } = useAuth();
   return (
+    <div>
     <header className="rfHeader">
       <div>
         <span>{title}</span>
@@ -20,6 +22,8 @@ const RFHeader = ({ title }) => {
         {currentUser ? <ProfileNavigation /> : <LoginCompoonent />}
       </div>
     </header>
+    <AppStrip/>
+    </div>
   );
 };
 

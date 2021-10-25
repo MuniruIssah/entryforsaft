@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTh, faThLarge } from "@fortawesome/free-solid-svg-icons";
 import RFHeader from "../components/RFHeader";
 import DescriptionStrip from "../components/DescriptionStrip";
+import { Link,useLocation } from "react-router-dom";
 const AppListStripLayout = ({
   title='Test',
   children,
@@ -29,7 +30,8 @@ const AppListStripLayout = ({
 
 export default AppListStripLayout;
 
-const AppStrip = () => {
+export const AppStrip = () => {
+
   return (
     <div className="appStrip">
       {AllPages.map((item) => (
@@ -39,11 +41,13 @@ const AppStrip = () => {
   );
 };
 
-const AppHolder = ({ name, icon }) => {
+const AppHolder = ({ name, icon,link }) => {
+  const {pathname}=useLocation()
+  console.log(pathname)
   return (
-    <div className="appHolder current">
+    <Link className={`appHolder ${pathname==link?'current':''}`} to={link}>
       <FontAwesomeIcon className="appHIcon" icon={icon} />
       <span>{name}</span>
-    </div>
+    </Link>
   );
 };
