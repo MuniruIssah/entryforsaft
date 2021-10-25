@@ -1,4 +1,4 @@
-import { faStream, faThLarge, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faNewspaper, faQuestion, faQuoteLeft, faStream, faThLarge, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export const countryColors = {
   Ghana: {
@@ -40,13 +40,36 @@ export const AllPages=[
   //   icon:faStream 
   // },
   // {
-  //   name:'Ask',
-  //   link:'/wird',
-  //   icon:faStream 
+  //   name:'News',
+  //   link:'/news',
+  //   icon:faNewspaper 
   // },
   // {
   //   name:'FAQs',
-  //   link:'/wird',
-  //   icon:faStream 
+  //   link:'/faqs',
+  //   icon:faQuestion 
   // },
+  // {
+  //   name:'Quotes',
+  //   link:'/quotes',
+  //   icon:faQuoteLeft 
+  // },
+]
+
+
+export const creations=[
+  {
+    title:'Add a new Quote',
+    value:'quote'
+  },
+  {
+    title:'Add a new Sheikh',
+    value:'sheikh'
+
+  },
+  {
+    title:'Add a new FAQ',
+    value:'faq'
+  },
+
 ]

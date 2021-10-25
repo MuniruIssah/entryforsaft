@@ -1,13 +1,24 @@
 import { Avatar, Button, Col, Row } from "antd";
 import React from "react";
-import { UserOutlined, MailOutlined, EditOutlined } from "@ant-design/icons";
+import {
+  UserOutlined,
+  MailOutlined,
+  EditOutlined,
+  AppstoreFilled,
+} from "@ant-design/icons";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-regular-svg-icons";
 import { faPen, faUserEdit } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const ProfileCard = ({ name }) => {
   return (
     <Row className="profileCard">
+      <Link className="goHome" to='/'>
+        <Button size="small" type="text" icon={<AppstoreFilled />}>
+          All Apps
+        </Button>
+      </Link>
       <FirstColumn name={name.slice(0, 1)} />
       <SecondColumn name={name} />
     </Row>
@@ -21,7 +32,10 @@ const FirstColumn = ({ name }) => {
     <>
       <Col md={5} xs={0}>
         <div className="avatarColumn">
-          <Avatar size={70} style={{backgroundColor:'#373737'}}> {name}</Avatar>
+          <Avatar size={70} style={{ backgroundColor: "#373737" }}>
+            {" "}
+            {name}
+          </Avatar>
         </div>
       </Col>
       <Col md={0} xs={24}>
@@ -41,6 +55,9 @@ const SecondColumn = ({ name }) => {
           <Button size="small" className="dCButton">
             Edit Profile
           </Button>
+          {/* <Button size="small" className="dCButton">
+            Go Home
+          </Button> */}
         </div>
       </Col>
       <Col md={0} xs={24}>

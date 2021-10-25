@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useProfile } from "../../contexts/ProfileContext";
+import { AppStrip } from "../../layouts/AppListStripLayout";
 
 const Profile = () => {
   const { currentUser } = useAuth();
@@ -18,6 +19,9 @@ const Profile = () => {
       className="profilePage"
       style={{ backgroundImage: `url(${allBackgrounds[currentBackground]})` }}
     >
+      <div className='profileHeader'>
+      {/* <AppStrip/> */}
+      </div>
       <ProfileCard name={currentUser?.displayName} />
       <div className="profileCard" style={{ marginTop: "2rem" }}>
         <Form
