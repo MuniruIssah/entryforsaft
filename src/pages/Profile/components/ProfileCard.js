@@ -14,8 +14,8 @@ import { Link } from "react-router-dom";
 const ProfileCard = ({ name }) => {
   return (
     <Row className="profileCard">
-      <Link className="goHome" to='/'>
-        <Button size="small" type="text" icon={<AppstoreFilled />}>
+      <Link className="goHome" to='/' >
+        <Button size="small" type="text" style={{color:'#373737',borderRadius:5,backgroundColor:'lightgrey'}} icon={<AppstoreFilled />}>
           All Apps
         </Button>
       </Link>

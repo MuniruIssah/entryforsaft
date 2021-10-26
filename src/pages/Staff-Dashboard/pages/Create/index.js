@@ -10,7 +10,7 @@ const StaffCreation = () => {
       <h1>Create</h1>
       <div>
         <div>
-          <Select placeholder="Select an option to create">
+          <Select placeholder="Add a new ...">
             {creations.map((item, index) => (
               <Option value={item.value} key={index}>{item.title}</Option>
             ))}

@@ -5,7 +5,17 @@ import {
   UserOutlined,
   InfoCircleOutlined,
 } from "@ant-design/icons";
-import { Avatar, Button, Drawer, Dropdown, Input, Menu, message, Tooltip,Form } from "antd";
+import {
+  Avatar,
+  Button,
+  Drawer,
+  Dropdown,
+  Input,
+  Menu,
+  message,
+  Tooltip,
+  Form,
+} from "antd";
 import LoginCompoonent from "../LoginComponent";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
@@ -53,10 +63,10 @@ const ProfileNavigation = () => {
   );
   return (
     <>
+      <ReportIssue />
       <Dropdown overlay={menu} trigger={["click"]}>
         <Avatar size={28} icon={<UserOutlined />} />
       </Dropdown>
-      <ReportIssue />
     </>
   );
 };
@@ -70,7 +80,7 @@ const ReportIssue = () => {
           onClick={() => setShowReportDrawer(true)}
           style={{
             fontSize: "20px",
-            marginLeft: 10,
+            marginRight: 10,
             color: "orange",
             cursor: "pointer",
           }}
@@ -88,13 +98,19 @@ const ReportIssue = () => {
         visible={showReportDrawer}
       >
         <Form>
-        <p>Please type out the issue you have with this page</p>
-        <Form.Item>
-        <Input.TextArea placeholder='The team is ever ready to effect your changes' />
-        </Form.Item>
-        <Form.Item style={{textAlign:'right'}}>
-        <Button type='primary' style={{backgroundColor:'orange',border:'none'}} htmlType='submit'>Submit</Button>
-        </Form.Item>
+          <p>Please type out the issue you have with this page</p>
+          <Form.Item>
+            <Input.TextArea placeholder="The team is ever ready to effect your changes" />
+          </Form.Item>
+          <Form.Item style={{ textAlign: "right" }}>
+            <Button
+              type="primary"
+              style={{ backgroundColor: "orange", border: "none" }}
+              htmlType="submit"
+            >
+              Submit
+            </Button>
+          </Form.Item>
         </Form>
       </Drawer>
     </>
