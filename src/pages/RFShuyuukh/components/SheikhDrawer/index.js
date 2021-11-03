@@ -22,10 +22,10 @@ const SheikhDrawer = ({ visible, onClose, sheikh }) => {
       width="min(420px,100vw)"
       placement="right"
     >
-       <div
-          className="sheikhImage"
-          style={{ backgroundImage: `url(${sheikh.profile})` }}
-        ></div>
+      <div
+        className="sheikhImage"
+        style={{ backgroundImage: `url(${sheikh.profile})` }}
+      ></div>
       {/* <Avatar
         src={sheikh.profile}
         style={{ border: "1px solid gainsboro" ,backgroundPosition:'top center'}}
@@ -42,12 +42,9 @@ const SheikhDrawer = ({ visible, onClose, sheikh }) => {
         </summary>
         <Image.PreviewGroup>
           <div className="sheikhDrawerGallery">
-            <Image src="https://via.placeholder.com/90" />
-            <Image src="https://via.placeholder.com/90" />
-            <Image src="https://via.placeholder.com/90" />
-            <Image src="https://via.placeholder.com/90" />
-            <Image src="https://via.placeholder.com/90" />
-            <Image src="https://via.placeholder.com/90" />
+            {new Array(6).fill(0).map((item, index) => (
+              <Image key={index} src="https://via.placeholder.com/800" />
+            ))}          
           </div>
         </Image.PreviewGroup>
       </details>

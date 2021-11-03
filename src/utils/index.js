@@ -59,14 +59,15 @@ export const AllPages=[
 
 export const creations=[
   {
-    title:'Add a new Quote',
-    value:'quote'
-  },
-  {
     title:'Add a new Sheikh',
     value:'sheikh'
 
   },
+  {
+    title:'Add a new Quote',
+    value:'quote'
+  },
+
   {
     title:'Add a new FAQ',
     value:'faq'
