@@ -98,7 +98,7 @@ const ReportIssue = () => {
         visible={showReportDrawer}
       >
         <Form>
-          <p>Please type out the issue you have with this page</p>
+          <p>Please type out the issue/suggestion you have with this page</p>
           <Form.Item>
             <Input.TextArea placeholder="The team is ever ready to effect your changes" />
           </Form.Item>

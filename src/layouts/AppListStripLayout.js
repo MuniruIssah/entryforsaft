@@ -7,7 +7,6 @@ import React from "react";
 import { AllPages } from "../utils";
 import "./styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTh, faThLarge } from "@fortawesome/free-solid-svg-icons";
 import RFHeader from "../components/RFHeader";
 import DescriptionStrip from "../components/DescriptionStrip";
 import { Link,useLocation } from "react-router-dom";
@@ -20,7 +19,6 @@ const AppListStripLayout = ({
   return (
     <div className="rfAskUs">
       <RFHeader title={title} />
-      <AppStrip />
       <DescriptionStrip title={descriptionTitle} description={description} />
 
       {children}
@@ -43,7 +41,6 @@ export const AppStrip = () => {
 
 const AppHolder = ({ name, icon,link }) => {
   const {pathname}=useLocation()
-  console.log(pathname)
   return (
     <Link className={`appHolder ${pathname==link?'current':''}`} to={link}>
       <FontAwesomeIcon className="appHIcon" icon={icon} />

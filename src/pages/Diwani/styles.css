@@ -1,0 +1,8 @@
+.diwaniTabInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 47vh;
+  overflow-y: "scroll";
+}

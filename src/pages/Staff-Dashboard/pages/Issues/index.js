@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { List, Avatar, Skeleton, Button } from "antd";
+import { List, Avatar, Skeleton, Button, Divider } from "antd";
 import "./styles.css";
 
 const dummyList = [{
     username:'Test issue',
     issue:'Issah is testing the issues portal'
-}];
+},
+{
+  username:'Test issue 2',
+  issue:'Issah is testing the issues portal'
+}
+];
 const StaffIssues = () => {
     const [loading, setLoading] = useState(true)
 
@@ -20,20 +25,33 @@ const StaffIssues = () => {
       <h1>Issues</h1>
       <List
         className="demo-loadmore-list"
-        // loading={loading}
         itemLayout="horizontal"
-        // loadMore={loadMore}
+        loadMore={true}
         dataSource={dummyList}
         renderItem={(item) => (
           <List.Item
             actions={[
-              <Button
+             
+            ]}
+          >
+            <Skeleton  title={false} loading={loading} active>
+              {/* <List.Item.Meta
+                title={item.username}
+                description={item.issue}
+              /> */}
+              <div>
+                <h3>{item.username}</h3>
+                <span>{item.issue}</span>
+              </div>
+            
+            </Skeleton>
+            <Button
                 type="text"
                 key="list-loadmore-more"
                 style={{ borderRadius: 5 }}
               >
-                Mark as Resolved
-              </Button>,
+                Resolve
+              </Button>|
               <Button
                 type="text"
                 key="list-loadmore-more"
@@ -41,18 +59,8 @@ const StaffIssues = () => {
                 style={{ borderRadius: 5 }}
               >
                 Delete
-              </Button>,
-            ]}
-          >
-            <Skeleton avatar title={false} loading={loading} active>
-              <List.Item.Meta
-                avatar={
-                  <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                }
-                title={<a href="https://ant.design">{item.username}</a>}
-                description={item.issue}
-              />
-            </Skeleton>
+              </Button>
+              <Divider/>
           </List.Item>
         )}
       />

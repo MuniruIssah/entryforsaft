@@ -1,0 +1,51 @@
+.diwaniChapterCard {
+  background-color: #373737;
+  direction: rtl;
+  width: min(500px, 90vw);
+  /* height: 50vh; */
+  padding: 1rem;
+  font-size: max(18px, 1.25vw);
+  border-radius: 6px;
+  margin: 0.6rem 0rem;
+  border: 1px solid grey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: "Noto Naskh Arabic", serif;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arabicText {
+  font-family: "Noto Naskh Arabic", serif;
+}
+.diwaniDrawerTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+}
+
+
+.diwaniAyahCard{
+    background-color: #404040;
+    direction: rtl;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: max(18px, 1.25vw);
+    border-radius: 6px;
+    margin: 1rem 0rem;
+    border: 1px solid rgb(95, 95, 95);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "Noto Naskh Arabic", serif;
+    align-items: center;
+}
+.diwaniAyahCard span:first-child{
+    align-self: flex-start;
+    margin-bottom: 0.2rem;
+}
+.diwaniAyahCard span:last-child{
+    align-self: flex-end;
+}

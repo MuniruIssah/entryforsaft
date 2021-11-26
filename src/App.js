@@ -16,6 +16,8 @@ import Profile from "./pages/Profile";
 import StaffDashboard from "./pages/Staff-Dashboard";
 import ProfileProvider from "./contexts/ProfileContext";
 import AppListStripLayout from "./layouts/AppListStripLayout";
+import Diwani from "./pages/Diwani";
+import DiwaniProvider from "./contexts/DiwaniContext";
 function App() {
   return (
     <div className="App">
@@ -32,6 +34,11 @@ function App() {
               <Route path="/wird">
                 <RFWird />
               </Route>
+              <Route path="/diwani">
+                <DiwaniProvider>
+                  <Diwani />
+                </DiwaniProvider>
+              </Route>
               <Route path="/profile">
                 <Profile />
               </Route>
@@ -41,18 +48,18 @@ function App() {
               <Route path="/test">
                 <AppListStripLayout />
               </Route>
-              <Route path="/faqs" >
-            <RFFaqs/>
-          </Route>
-          <Route path="/askUs" >
-            <RFAskUs/>
-          </Route>
-              <Route path="/news" >
-            <RFNews/>
-          </Route>
-          <Route path="/quotes" >
-            <RFQuotes/>
-          </Route>
+              <Route path="/faqs">
+                <RFFaqs />
+              </Route>
+              <Route path="/askUs">
+                <RFAskUs />
+              </Route>
+              <Route path="/news">
+                <RFNews />
+              </Route>
+              <Route path="/quotes">
+                <RFQuotes />
+              </Route>
             </Switch>
           </Router>
         </AuthProvider>

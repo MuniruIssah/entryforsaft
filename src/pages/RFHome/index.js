@@ -18,12 +18,12 @@ const AppList = [
     link: "shuyuukh",
     image: sheehu,
   },
-  // {
-  //   label: "FAQ's",
-  //   description:"Frequently Asked Questions",
-
-  //   image: sheehu,
-  // },
+  {
+    label: "Diwani",
+    description:"A famous book of praises by Sheikh Ibrahim Inyass",
+    link: "diwani",
+    image: sheehu,
+  },
 ];
 const RFHome = () => {
   return (

@@ -1,4 +1,4 @@
-import { faNewspaper, faQuestion, faQuoteLeft, faStream, faThLarge, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faNewspaper, faQuestion, faQuoteLeft, faStream, faThLarge, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 export const countryColors = {
   Ghana: {
@@ -33,6 +33,11 @@ export const AllPages=[
     name:'Shuyuukh',
     link:'/shuyuukh',
     icon:faUsers 
+  },
+  {
+    name:'Diwani',
+    link:'/diwani',
+    icon:faBook 
   },
   // {
   //   name:'Wird',
