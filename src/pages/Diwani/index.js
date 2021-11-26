@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import AppListStripLayout from "../../layouts/AppListStripLayout";
 import { Spin, Tabs } from "antd";
 import { useDiwaniContext } from "../../contexts/DiwaniContext";
@@ -14,6 +14,15 @@ const Diwani = () => {
       return Object.keys(currentChapter.chapters);
     }
   }, [currentChapter]);
+
+
+  const subtitle=useCallback(
+    (chapterName) => {
+        if (currentChapter) {
+          const [part1,...rest]= currentChapter?.chapters[chapterName][0].split('،')
+          return part1
+        }}, [currentChapter],
+  )
 
   return (
     <AppListStripLayout
@@ -36,7 +45,7 @@ const Diwani = () => {
               <Spin style={{ marginTop: "2rem" }} />
             ) : (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} subtitle={currentChapter.chapters[chapterName][0]} />
+                <DiwaniChapterCard key={chapterName} title={chapterName} subtitle={subtitle(chapterName)} />
               ))
             )}
           </div>
