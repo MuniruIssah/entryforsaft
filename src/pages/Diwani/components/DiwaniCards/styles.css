@@ -10,10 +10,18 @@
   border: 1px solid grey;
   color: white;
   display: flex;
+  font-weight: 600;
+  flex-direction: column;
   justify-content: center;
+
   font-family: "Noto Naskh Arabic", serif;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
+}
+.diwaniChapterSubtitle {
+  font-size: max(14px, 1vw);
+  color:lightgrey;
+  font-weight: normal;
 }
 
 .arabicText {
@@ -26,26 +34,25 @@
   color: whitesmoke;
 }
 
-
-.diwaniAyahCard{
-    background-color: #404040;
-    direction: rtl;
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: max(19px, 1.25vw);
-    border-radius: 6px;
-    margin: 1rem 0rem;
-    border: 1px solid rgb(95, 95, 95);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-family: "Noto Naskh Arabic", serif;
-    align-items: center;
+.diwaniAyahCard {
+  background-color: #404040;
+  direction: rtl;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: max(19px, 1.25vw);
+  border-radius: 6px;
+  margin: 1rem 0rem;
+  border: 1px solid rgb(95, 95, 95);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Naskh Arabic", serif;
+  align-items: center;
 }
-.diwaniAyahCard span:first-child{
-    align-self: flex-start;
-    margin-bottom: 0.2rem;
+.diwaniAyahCard span:first-child {
+  align-self: flex-start;
+  margin-bottom: 0.2rem;
 }
-.diwaniAyahCard span:last-child{
-    align-self: flex-end;
+.diwaniAyahCard span:last-child {
+  align-self: flex-end;
 }

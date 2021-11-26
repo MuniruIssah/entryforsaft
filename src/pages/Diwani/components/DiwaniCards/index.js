@@ -16,8 +16,9 @@ export const DiwaniAyahCard = ({
   );
 };
 
-export const DiwaniChapterCard = ({ title }) => {
+export const DiwaniChapterCard = ({ title, subtitle }) => {
   const [visible, setVisible] = useState(false);
+  const [subT] = subtitle.split("،");
   return (
     <>
       <DiwaniChapterDrawer
@@ -26,7 +27,8 @@ export const DiwaniChapterCard = ({ title }) => {
         title={title}
       />
       <div className="diwaniChapterCard" onClick={() => setVisible(true)}>
-        {title}
+        <span className='arabicText'>{title}</span>
+        <span  className='arabicText diwaniChapterSubtitle'>{subT}</span>
       </div>
     </>
   );

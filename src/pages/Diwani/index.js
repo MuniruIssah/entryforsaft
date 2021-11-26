@@ -36,7 +36,7 @@ const Diwani = () => {
               <Spin style={{ marginTop: "2rem" }} />
             ) : (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard key={chapterName} title={chapterName} subtitle={currentChapter.chapters[chapterName][0]} />
               ))
             )}
           </div>
