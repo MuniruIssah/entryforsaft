@@ -54,6 +54,8 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText"> إِكْسِيرُ السَّعَاداتِ</span>}
           key="2"
+          style={{overflowY:"scroll"}}
+
         >
           <div className="diwaniTabInner">
             {loading ? (
@@ -68,6 +70,8 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText">سَلْوَةُ الشُّجُونِ</span>}
           key="3"
+          style={{overflowY:"scroll"}}
+
         >
           <div className="diwaniTabInner">
             {loading ? (
@@ -82,6 +86,8 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText">أَوْثَقُ الْعُرَى</span>}
           key="4"
+          style={{overflowY:"scroll"}}
+
         >
           <div className="diwaniTabInner">
             {loading ? (
@@ -96,6 +102,8 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText">شِفَاءُ الْأَسْقَامِ</span>}
           key="5"
+          style={{overflowY:"scroll"}}
+
         >
           <div className="diwaniTabInner">
             {loading ? (
@@ -109,6 +117,7 @@ const Diwani = () => {
         </TabPane>
         <TabPane
           tab={<span className="arabicText">مَنَاسِكُ أَهْلِ الْوِدادِ</span>}
+          style={{overflowY:"scroll"}}
           key="6"
         >
           <div className="diwaniTabInner">
@@ -123,6 +132,7 @@ const Diwani = () => {
         </TabPane>
         <TabPane
           tab={<span className="arabicText">كَنْزُ الْعَارِفِينَ</span>}
+          style={{overflowY:"scroll"}}
           key="7"
         >
           <div className="diwaniTabInner">
@@ -138,6 +148,7 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText">نُورُ الْحَقِّ</span>}
           key="8"
+          style={{overflowY:"scroll"}}
         >
           <div className="diwaniTabInner">
             {loading ? (
@@ -152,6 +163,7 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText">سَيْرُ الْقَلْبِ</span>}
           key="9"
+          style={{overflowY:"scroll"}}
         >
           <div className="diwaniTabInner">
             {loading ? (
