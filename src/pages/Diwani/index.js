@@ -4,6 +4,7 @@ import { Spin, Tabs } from "antd";
 import { useDiwaniContext } from "../../contexts/DiwaniContext";
 import { DiwaniChapterCard } from "./components/DiwaniCards";
 import "./styles.css";
+import UnderConstruction from "../../components/UnderConstruction";
 const { TabPane } = Tabs;
 const Diwani = () => {
   const { currentChapter, rank, changeRank, loading } = useDiwaniContext();
@@ -15,14 +16,16 @@ const Diwani = () => {
     }
   }, [currentChapter]);
 
-
-  const subtitle=useCallback(
+  const subtitle = useCallback(
     (chapterName) => {
-        if (currentChapter) {
-          const [part1,...rest]= currentChapter?.chapters[chapterName][0].split('،')
-          return part1
-        }}, [currentChapter],
-  )
+      if (currentChapter) {
+        const [part1, ...rest] =
+          currentChapter?.chapters[chapterName][0].split("،");
+        return part1;
+      }
+    },
+    [currentChapter]
+  );
 
   return (
     <AppListStripLayout
@@ -39,139 +42,189 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText">تَيسِيرُ الوُصُولِ</span>}
           key="1"
-          style={{overflowY:"scroll"}}
+          style={{ overflowY: "scroll" }}
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} subtitle={subtitle(chapterName)} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
         <TabPane
           tab={<span className="arabicText"> إِكْسِيرُ السَّعَاداتِ</span>}
           key="2"
-          style={{overflowY:"scroll"}}
-
+          style={{ overflowY: "scroll" }}
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
         <TabPane
           tab={<span className="arabicText">سَلْوَةُ الشُّجُونِ</span>}
           key="3"
-          style={{overflowY:"scroll"}}
-
+          style={{ overflowY: "scroll" }}
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
         <TabPane
           tab={<span className="arabicText">أَوْثَقُ الْعُرَى</span>}
           key="4"
-          style={{overflowY:"scroll"}}
-
+          style={{ overflowY: "scroll" }}
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
         <TabPane
           tab={<span className="arabicText">شِفَاءُ الْأَسْقَامِ</span>}
           key="5"
-          style={{overflowY:"scroll"}}
-
+          style={{ overflowY: "scroll" }}
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
         <TabPane
           tab={<span className="arabicText">مَنَاسِكُ أَهْلِ الْوِدادِ</span>}
-          style={{overflowY:"scroll"}}
+          style={{ overflowY: "scroll" }}
           key="6"
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
         <TabPane
           tab={<span className="arabicText">كَنْزُ الْعَارِفِينَ</span>}
-          style={{overflowY:"scroll"}}
+          style={{ overflowY: "scroll" }}
           key="7"
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>{" "}
         <TabPane
           tab={<span className="arabicText">نُورُ الْحَقِّ</span>}
           key="8"
-          style={{overflowY:"scroll"}}
+          style={{ overflowY: "scroll" }}
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
         <TabPane
           tab={<span className="arabicText">سَيْرُ الْقَلْبِ</span>}
           key="9"
-          style={{overflowY:"scroll"}}
+          style={{ overflowY: "scroll" }}
         >
           <div className="diwaniTabInner">
             {loading ? (
               <Spin style={{ marginTop: "2rem" }} />
-            ) : (
+            ) : allChapterNames.length > 0 ? (
               allChapterNames?.map((chapterName) => (
-                <DiwaniChapterCard key={chapterName} title={chapterName} />
+                <DiwaniChapterCard
+                  key={chapterName}
+                  title={chapterName}
+                  subtitle={subtitle(chapterName)}
+                />
               ))
+            ) : (
+              <UnderConstruction />
             )}
           </div>
         </TabPane>
