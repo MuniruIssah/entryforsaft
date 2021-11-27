@@ -39,6 +39,7 @@ const Diwani = () => {
         <TabPane
           tab={<span className="arabicText">تَيسِيرُ الوُصُولِ</span>}
           key="1"
+          style={{overflowY:"scroll"}}
         >
           <div className="diwaniTabInner">
             {loading ? (
