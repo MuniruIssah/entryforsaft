@@ -1,30 +1,11 @@
 import React from "react";
 import DescriptionStrip from "../../components/DescriptionStrip";
-import sheehu from "./assets/sheehu.JPG";
 import "./styles.css";
 import RfAppCard from "./components/AppCard";
 import RFHeader from "../../components/RFHeader";
 import RFAppListItem from "./components/AppListItem";
+import { AppList } from "../../utils";
 
-const AppList = [
-  // {
-  //   label: 'Ruuhul Faida',
-  //   description:"This is Ruuhul Faida's Website",
-  //   image: sheehu,
-  // },
-  {
-    label: "Shuyuukh",
-    description: "All Sheikhs of Tijjaniyya",
-    link: "shuyuukh",
-    image: sheehu,
-  },
-  {
-    label: "Diwani",
-    description:"A famous book of praises by Sheikh Ibrahim Inyass",
-    link: "diwani",
-    image: sheehu,
-  },
-];
 const RFHome = () => {
   return (
     <div className="rfHome">

@@ -32,8 +32,8 @@ export const AppStrip = () => {
 
   return (
     <div className="appStrip">
-      {AllPages.map((item) => (
-        <AppHolder {...item} />
+      {AllPages.map((item,index) => (
+        <AppHolder {...item} key={index}/>
       ))}
     </div>
   );

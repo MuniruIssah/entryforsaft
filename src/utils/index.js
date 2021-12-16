@@ -1,4 +1,14 @@
-import { faBook, faNewspaper, faQuestion, faQuoteLeft, faStream, faThLarge, faUsers } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBook,
+  faExchangeAlt,
+  faNewspaper,
+  faQuestion,
+  faQuoteLeft,
+  faStream,
+  faThLarge,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
+import sheehu from "../assets/sheehu.JPG";
 
 export const countryColors = {
   Ghana: {
@@ -23,59 +33,87 @@ export const countryColors = {
   },
 };
 
-export const AllPages=[
+export const AllPages = [
   {
-    name:'All Apps',
-    link:'/',
-    icon:faThLarge
+    name: "All Apps",
+    link: "/",
+    icon: faThLarge,
   },
   {
-    name:'Shuyuukh',
-    link:'/shuyuukh',
-    icon:faUsers 
+    name: "Shuyuukh",
+    link: "/shuyuukh",
+    icon: faUsers,
   },
   {
-    name:'Diwani',
-    link:'/diwani',
-    icon:faBook 
+    name: "Diwani",
+    link: "/diwani",
+    icon: faBook,
+  },
+  {
+    name: "Transliterator",
+    link: "/transliterate",
+    icon: faExchangeAlt,
   },
   // {
   //   name:'Wird',
   //   link:'/wird',
-  //   icon:faStream 
+  //   icon:faStream
   // },
   // {
   //   name:'News',
   //   link:'/news',
-  //   icon:faNewspaper 
+  //   icon:faNewspaper
   // },
   // {
   //   name:'FAQs',
   //   link:'/faqs',
-  //   icon:faQuestion 
+  //   icon:faQuestion
   // },
   // {
   //   name:'Quotes',
   //   link:'/quotes',
-  //   icon:faQuoteLeft 
+  //   icon:faQuoteLeft
   // },
-]
+];
 
-
-export const creations=[
+export const AppList = [
+  // {
+  //   label: 'Ruuhul Faida',
+  //   description:"This is Ruuhul Faida's Website",
+  //   image: sheehu,
+  // },
   {
-    title:'Add a new Sheikh',
-    value:'sheikh'
-
+    label: "Shuyuukh",
+    description: "All Sheikhs of Tijjaniyya",
+    link: "shuyuukh",
+    image: sheehu,
   },
   {
-    title:'Add a new Quote',
-    value:'quote'
+    label: "Diwani",
+    description: "A famous book of praises",
+    link: "diwani",
+    image: sheehu,
+  },
+  {
+    label: "Transliterator",
+    description: "An Arabic Transliteration engine",
+    link: "transliterate",
+    image: sheehu,
+  },
+];
+
+export const creations = [
+  {
+    title: "Add a new Sheikh",
+    value: "sheikh",
+  },
+  {
+    title: "Add a new Quote",
+    value: "quote",
   },
 
   {
-    title:'Add a new FAQ',
-    value:'faq'
+    title: "Add a new FAQ",
+    value: "faq",
   },
-
-]
+];

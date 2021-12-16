@@ -2,7 +2,7 @@
   background-color: #373737;
   direction: rtl;
   width: min(500px, 90vw);
-  /* height: 50vh; */
+  min-height: 90px;
   padding: 1rem;
   font-size: max(18px, 1.25vw);
   border-radius: 6px;

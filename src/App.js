@@ -18,6 +18,7 @@ import ProfileProvider from "./contexts/ProfileContext";
 import AppListStripLayout from "./layouts/AppListStripLayout";
 import Diwani from "./pages/Diwani";
 import DiwaniProvider from "./contexts/DiwaniContext";
+import Transliterator from "./pages/Transliterator";
 function App() {
   return (
     <div className="App">
@@ -41,6 +42,9 @@ function App() {
               </Route>
               <Route path="/profile">
                 <Profile />
+              </Route>
+              <Route path="/transliterate">
+                <Transliterator />
               </Route>
               <Route path="/staff">
                 <StaffDashboard />
