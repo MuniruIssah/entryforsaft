@@ -32,7 +32,8 @@ export const arabicConsonantsAndSounds = {
 };
 
 export const arabicVowelArray = [" ُ", " َ", " ِ", " ْ", " ً", " ٍ", " ٌ"];
-
+export const shadda = " ّ";
+const isShadda = (character) => shadda[1] === character;
 export const arabicVowelsAndSounds = {
   0: "u",
   1: "a",
@@ -46,15 +47,39 @@ export const arabicVowelsAndSounds = {
 // we are only handling words now and without madd
 export const transliterate = (word) => {
   const arrayOfCharacters = word.split("");
+
   const soundArray = arrayOfCharacters.map((item, index) => {
+    console.log(item);
     if (arabicConsonantsAndSounds[item]) {
       return arabicConsonantsAndSounds[item];
     } else {
-      return arabicVowelsAndSounds[
-        arabicVowelArray.findIndex((arrItem) => arrItem[1] === item)
-      ];
+      let found = arabicVowelArray.findIndex((arrItem) => arrItem[1] === item);
+      if (found > -1) {
+        return arabicVowelsAndSounds[found];
+      } else {
+        return isShadda(item) ? "shad" : null;
+      }
     }
   });
-  console.log(soundArray.join(""));
-  return soundArray.join("")
+  
+  for (let i = 1; i < soundArray.length; i++) {
+    if (soundArray[i] === "shad") {
+      let nearestC = nearestConsonant(arrayOfCharacters, i);
+      // console.log(nearestC);
+      soundArray.splice(i,1);
+      console.log(soundArray);
+      soundArray.splice(nearestC.index + 1, 0, nearestC.character);
+      console.log(soundArray);
+    }
+  }
+
+  return soundArray.join("");
+};
+
+const nearestConsonant = (array, currentIndex) => {
+  for (let i = currentIndex - 1; i >= 0; i--) {
+    if (arabicConsonantsAndSounds[array[i]]) {
+      return { character: arabicConsonantsAndSounds[array[i]], index: i };
+    }
+  }
 };

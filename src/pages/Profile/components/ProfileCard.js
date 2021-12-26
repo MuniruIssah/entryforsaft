@@ -14,11 +14,6 @@ import { Link } from "react-router-dom";
 const ProfileCard = ({ name }) => {
   return (
     <Row className="profileCard">
-      <Link className="goHome" to='/' >
-        <Button size="small" type="text" style={{color:'#373737',borderRadius:5,backgroundColor:'lightgrey'}} icon={<AppstoreFilled />}>
-          All Apps
-        </Button>
-      </Link>
       <FirstColumn name={name.slice(0, 1)} />
       <SecondColumn name={name} />
     </Row>
@@ -52,9 +47,20 @@ const SecondColumn = ({ name }) => {
       <Col md={19} xs={0}>
         <div className="detailsColumn">
           <span className="dCName">{name}</span>
-          <Button size="small" className="dCButton">
-            Edit Profile
-          </Button>
+          <Link to="/">
+            <Button
+              size="small"
+              type="text"
+              style={{
+                color: "#373737",
+                borderRadius: 5,
+                backgroundColor: "lightgrey",
+              }}
+              icon={<AppstoreFilled />}
+            >
+              All Apps
+            </Button>
+          </Link>
           {/* <Button size="small" className="dCButton">
             Go Home
           </Button> */}
@@ -63,9 +69,20 @@ const SecondColumn = ({ name }) => {
       <Col md={0} xs={24}>
         <div className="detailsColumn2">
           <span className="dCName">{name}</span>
-          <Button size="small" className="dCButton">
-            Edit Profile
-          </Button>
+          <Link to="/">
+            <Button
+              size="small"
+              type="text"
+              style={{
+                color: "#373737",
+                borderRadius: 5,
+                backgroundColor: "lightgrey",
+              }}
+              icon={<AppstoreFilled />}
+            >
+              All Apps
+            </Button>
+          </Link>
         </div>
       </Col>
     </>

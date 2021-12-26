@@ -1,7 +1,7 @@
 .diwaniChapterCard {
   background-color: #373737;
   direction: rtl;
-  width: min(500px, 90vw);
+  width: 500px;
   min-height: 90px;
   padding: 1rem;
   font-size: max(18px, 1.25vw);
@@ -20,7 +20,7 @@
 }
 .diwaniChapterSubtitle {
   font-size: max(14px, 1vw);
-  color:lightgrey;
+  color: lightgrey;
   font-weight: normal;
 }
 
@@ -55,4 +55,10 @@
 }
 .diwaniAyahCard span:last-child {
   align-self: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  .diwaniChapterCard {
+    width: 90vw;
+  }
 }

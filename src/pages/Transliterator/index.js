@@ -50,7 +50,7 @@ const Transliterator = () => {
           </Button>
           <p>
             Please this feature is under construction. As such the text should
-            be limited to a word. The word should be without a madd, shad and alif wa laam
+            be limited to a word. The word should be without a madd and alif wa laam
           </p>
         </div>
         <div className="transliteratorSection">
